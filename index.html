@@ -482,6 +482,11 @@ textarea.q-input{resize:vertical;min-height:80px;}
 .semana-content{display:none;} .semana-content.active{display:block;}
 @media(max-width:480px){.nav-title span{display:none;}.nav-brand{max-width:100px;}}
 
+
+.plano-content{display:none !important;}
+.plano-content.active{display:block !important;}
+.sub-treino-content{display:none !important;}
+.sub-treino-content.active{display:block !important;animation:fadeUp 0.3s ease;}
 </style>
 </head>
 <body>
@@ -521,10 +526,10 @@ textarea.q-input{resize:vertical;min-height:80px;}
     </div>
   </div>
   <div class="plan-info-bar">
-    <div class="plan-pill"><div class="pl-label">Início do Plano</div><div class="pl-val">20/04/2026</div></div>
+    <div class="plan-pill"><div class="pl-label">Início do Plano</div><div class="pl-val">10/08/2026</div></div>
     <div class="plan-pill"><div class="pl-label">Duração</div><div class="pl-val">6 semanas</div></div>
-    <div class="plan-pill"><div class="pl-label">Total diário</div><div class="pl-val">~1.565 kcal</div></div>
-    <div class="plan-pill"><div class="pl-label">Treinos/semana</div><div class="pl-val">5 treinos</div></div>
+    <div class="plan-pill"><div class="pl-label">Total diário</div><div class="pl-val">~1.400 kcal</div></div>
+    <div class="plan-pill"><div class="pl-label">Treinos/semana</div><div class="pl-val">4 treinos Full Body</div></div>
   </div>
   <div class="recados-box">
     <h4>📌 Recados do Luan</h4>
@@ -535,7 +540,7 @@ textarea.q-input{resize:vertical;min-height:80px;}
       <h3>Ficha da Cliente</h3>
       <div class="profile-item"><span class="label">Nome</span><span class="value">Cinthya Coelho Laranja</span></div>
       <div class="profile-item"><span class="label">Idade</span><span class="value">53 anos</span></div>
-      <div class="profile-item"><span class="label">Peso</span><span class="value">63,5 kg</span></div>
+      <div class="profile-item"><span class="label">Peso</span><span class="value">65 kg</span></div>
       <div class="profile-item"><span class="label">Altura</span><span class="value">1,71 m</span></div>
       <div class="profile-item"><span class="label">Profissão</span><span class="value">Funcionária Pública</span></div>
       <div class="profile-item"><span class="label">Cidade</span><span class="value">Vila Velha / ES</span></div>
@@ -553,9 +558,9 @@ textarea.q-input{resize:vertical;min-height:80px;}
   </div>
   <div class="section-header"><h2>O que você <span>encontra aqui</span></h2><div class="section-line"></div></div>
   <div class="info-grid">
-    <div class="info-box"><div class="icon">🥗</div><h4>Dieta</h4><p>4 refeições · ~1.565 kcal/dia · substituições completas + biblioteca de conscientização.</p></div>
-    <div class="info-box"><div class="icon">🏋️</div><h4>Treino</h4><p>4 treinos semanais · 2 inferiores + 2 superiores · aquecimento, timer e vídeos.</p></div>
-    <div class="info-box"><div class="icon">🏃</div><h4>Cardio</h4><p>Programa de 6 semanas · 4x/semana · progressão gradual com zonas de intensidade.</p></div>
+    <div class="info-box"><div class="icon">🥗</div><h4>Dieta</h4><p><strong>4 refeições · ~1.400 kcal/dia</strong> · redução via carboidratos · substituições ampliadas (8-10 opções).</p></div>
+    <div class="info-box"><div class="icon">🏋️</div><h4>Treino</h4><p><strong>4 treinos Full Body/semana</strong> · intercalando inf/sup · com 3 blocos de cardio integrado (início/meio/fim).</p></div>
+    <div class="info-box"><div class="icon">🏃</div><h4>Cardio</h4><p><strong>Cardio integrado ao treino</strong> · aumento do gasto calórico · redução de sessões extras dedicadas.</p></div>
     <div class="info-box"><div class="icon">📈</div><h4>Evolução</h4><p>Histórico de peso com gráfico e registro de fotos de acompanhamento.</p></div>
     <div class="info-box"><div class="icon">📋</div><h4>Relatório</h4><p>Estratégia completa com orientações personalizadas e links educativos.</p></div>
     <div class="info-box"><div class="icon">💬</div><h4>Feedback</h4><p>Formulário semanal clicável com geração automática de resumo para WhatsApp.</p></div>
@@ -563,108 +568,114 @@ textarea.q-input{resize:vertical;min-height:80px;}
 </section>
 <section id="dieta" class="section">
   <div class="section-header"><h2>Planejamento <span>Alimentar</span></h2><div class="section-line"></div></div>
-  <div class="sub-search-wrap"><h4>🔍 Busca rápida de substitutos</h4><input class="sub-search-input" type="text" id="subSearch" placeholder="Digite o alimento..." oninput="searchSubs()"><div id="sub-results"></div></div>
-  <div class="meal-total"><div class="total-pill"><span class="label">Total diário</span><span class="value">1.565</span><span style="font-size:10px;color:var(--white-dim);">kcal</span></div></div>
+<div style="background:linear-gradient(135deg,rgba(201,168,76,0.06),rgba(201,168,76,0.02));border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin-bottom:20px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:16px;">🎯</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);">Planejamento Ajustado · ~1.400 kcal</span>
+  </div>
+  <div style="font-size:11px;color:var(--white-dim);line-height:1.8;">
+    <strong style="color:var(--white)">4 refeições/dia</strong> · redução calórica via <strong style="color:var(--white)">fontes de carboidrato</strong> (pão, arroz, granola) · proteína mantida integral<br>
+    <strong style="color:var(--white)">Substituições ampliadas</strong> — cada alimento com 8-10 opções para dias corridos ou fora de casa<br>
+    <span style="color:var(--gold);">⚠️</span> <strong style="color:var(--white)">Cumprir o plano é matemática:</strong> beliscar fora ou refeições extras cancelam o déficit da semana
+  </div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header"><div class="meal-header-left"><div class="meal-num">1</div><div><div class="meal-name">Café da Manhã</div><span class="meal-time">07:00</span></div></div><div class="meal-kcal">426 <span>kcal</span></div></div>
-    <div class="meal-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="meal-table"><thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (qtd · kcal equiv.)</th></tr></thead><tbody>
-      <tr><td class="food-name">Ovos inteiros</td><td class="food-qty">2 unidades</td><td class="food-kcal">140</td><td class="food-sub">Claras <strong>5 un · ~85kcal</strong> + 1 ovo inteiro<br>Frango grelhado <strong>70g · ~115kcal</strong><br>Atum em água <strong>90g · ~97kcal</strong><br>Whey protein <strong>25g · ~100kcal</strong><br>Cottage desnatado <strong>120g · ~84kcal</strong></td></tr>
-      <tr><td class="food-name">Pão integral</td><td class="food-qty">2 fatias (60g)</td><td class="food-kcal">148</td><td class="food-sub">Tapioca (goma seca) <strong>70g · ~147kcal</strong><br>Aveia em flocos <strong>40g · ~154kcal</strong><br>Batata-doce cozida <strong>150g · ~135kcal</strong><br>Cuscuz marroquino <strong>50g seco · ~180kcal</strong><br>Flocão de milho <strong>50g · ~175kcal</strong></td></tr>
-      <tr><td class="food-name">Mamão</td><td class="food-qty">200g</td><td class="food-kcal">86</td><td class="food-sub">Banana prata <strong>120g · ~106kcal</strong><br>Maçã <strong>200g · ~104kcal</strong><br>Melão <strong>300g · ~90kcal</strong><br>Abacaxi <strong>200g · ~104kcal</strong><br>Manga <strong>150g · ~93kcal</strong></td></tr>
-      <tr><td class="food-name">Granola sem açúcar</td><td class="food-qty">15g</td><td class="food-kcal">52</td><td class="food-sub">Aveia em flocos <strong>15g · ~58kcal</strong><br>Mix de castanhas <strong>10g · ~62kcal</strong><br>Flocão de milho <strong>15g · ~53kcal</strong><br>Chia <strong>12g · ~58kcal</strong><br>Linhaça dourada <strong>15g · ~81kcal</strong></td></tr>
-    </tbody></table>
-<div style="text-align:center;font-size:10px;color:rgba(245,240,232,0.5);padding:3px 0 10px;">← deslize →</div></div>
-    <div class="meal-obs-area"><textarea placeholder="Observações desta refeição..." data-key="meal-obs-1" onchange="saveObs(this)"></textarea></div>
+<div class="meal-total"><div class="total-pill"><span class="label">Total diário</span><span class="value">~1.400</span> <span class="unit">kcal</span></div></div>
+<div class="meal-card">
+  <div class="meal-header">
+    <div class="meal-header-left">
+      <div class="meal-num">1</div>
+      <div>
+        <div class="meal-name">Café da Manhã</div>
+        <span class="meal-time">07:00</span>
+      </div>
+    </div>
+    <div class="meal-kcal">352 <span>kcal</span></div>
   </div>
+  <div class="meal-table-wrap"><table class="meal-table"><thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (qtd · kcal equiv.)</th></tr></thead>
+    <tbody>
+      <tr><td class="food-name">Ovos inteiros</td><td class="food-qty">2 unidades</td><td class="food-kcal">140</td><td class="food-sub">5 claras + 1 ovo<br>Whey isolado <strong>25g</strong><br>Frango grelhado <strong>70g</strong><br>Atum em água <strong>90g</strong><br>Cottage <strong>130g</strong><br>Ricota <strong>140g</strong><br>Iogurte grego natural <strong>180g</strong><br>Salmão defumado <strong>60g</strong></td></tr>
+      <tr><td class="food-name">Pão integral</td><td class="food-qty">1 fatia (30g)</td><td class="food-kcal">74</td><td class="food-sub">Tapioca (goma seca) <strong>35g</strong><br>Aveia em flocos <strong>20g</strong><br>Batata-doce cozida <strong>80g</strong><br>Cuscuz seco <strong>25g</strong><br>Pão light <strong>2 fatias</strong><br>Wrap integral <strong>1 un</strong><br>Biscoito de arroz <strong>3 un</strong><br>Panqueca de aveia (1 ovo+15g aveia)<br>Crepioca (2 claras+15g goma)<br>Mandioca cozida <strong>40g</strong></td></tr>
+      <tr><td class="food-name">Mamão</td><td class="food-qty">200g</td><td class="food-kcal">86</td><td class="food-sub">Banana prata <strong>120g</strong><br>Maçã <strong>200g</strong><br>Melão <strong>300g</strong><br>Abacaxi <strong>200g</strong><br>Manga <strong>150g</strong><br>Pera <strong>200g</strong><br>Morango <strong>250g</strong><br>Kiwi <strong>180g</strong><br>Melancia <strong>350g</strong><br>Uva <strong>100g</strong></td></tr>
+      <tr><td class="food-name">Granola sem açúcar</td><td class="food-qty">15g</td><td class="food-kcal">52</td><td class="food-sub">Aveia em flocos <strong>15g</strong><br>Mix de castanhas <strong>10g</strong><br>Flocão de milho <strong>15g</strong><br>Chia <strong>12g</strong><br>Linhaça dourada <strong>15g</strong><br>Amêndoas <strong>8g</strong><br>Nozes <strong>8g</strong><br>Cacau nibs <strong>15g</strong><br>Coco ralado s/açúcar <strong>15g</strong><br>Muesli sem açúcar <strong>15g</strong></td></tr>
+    </tbody></table></div><div class="swipe-hint">← deslize →</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header"><div class="meal-header-left"><div class="meal-num">2</div><div><div class="meal-name">Almoço</div><span class="meal-time">12:30</span></div></div><div class="meal-kcal">372 <span>kcal</span></div></div>
-    <div class="meal-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="meal-table"><thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (qtd · kcal equiv.)</th></tr></thead><tbody>
-      <tr><td class="food-name">Arroz branco cozido</td><td class="food-qty">70g</td><td class="food-kcal">91</td><td class="food-sub">Batata-doce cozida <strong>100g · ~90kcal</strong><br>Macarrão integral cozido <strong>80g · ~93kcal</strong><br>Aipim cozido <strong>70g · ~93kcal</strong><br>Cuscuz cozido <strong>90g · ~107kcal</strong><br>Inhame cozido <strong>85g · ~94kcal</strong></td></tr>
-      <tr><td class="food-name">Feijão carioca</td><td class="food-qty">70g (cozido)</td><td class="food-kcal">53</td><td class="food-sub">Feijão preto <strong>65g · ~58kcal</strong><br>Lentilha cozida <strong>70g · ~81kcal</strong><br>Grão-de-bico cozido <strong>60g · ~84kcal</strong><br>Ervilha cozida <strong>75g · ~62kcal</strong><br>Edamame <strong>55g · ~77kcal</strong></td></tr>
-      <tr><td class="food-name">Peito de frango grelhado</td><td class="food-qty">120g</td><td class="food-kcal">132</td><td class="food-sub">Atum em água <strong>130g · ~140kcal</strong><br>Tilápia grelhada <strong>145g · ~160kcal</strong><br>Salmão grelhado <strong>85g · ~170kcal</strong><br>Patinho grelhado <strong>115g · ~184kcal</strong><br>Lombo de porco <strong>110g · ~143kcal</strong></td></tr>
-      <tr><td class="food-name">Verduras e vegetais</td><td class="food-qty">150g</td><td class="food-kcal">45</td><td class="food-sub">Couve · Brócolis · Cenoura · Abobrinha · Espinafre · Chuchu · Aspargos (qualquer combinação ~150g)</td></tr>
-      <tr><td class="food-name">Abacaxi</td><td class="food-qty">100g</td><td class="food-kcal">50</td><td class="food-sub">Melão <strong>150g · ~45kcal</strong><br>Laranja <strong>100g · ~47kcal</strong><br>Mamão <strong>115g · ~49kcal</strong><br>Maçã <strong>100g · ~52kcal</strong><br>Manga <strong>80g · ~50kcal</strong></td></tr>
-    </tbody></table>
-<div style="text-align:center;font-size:10px;color:rgba(245,240,232,0.5);padding:3px 0 10px;">← deslize →</div></div>
-    <div class="meal-obs-area"><textarea placeholder="Observações desta refeição..." data-key="meal-obs-2" onchange="saveObs(this)"></textarea></div>
+<div class="meal-card">
+  <div class="meal-header">
+    <div class="meal-header-left">
+      <div class="meal-num">2</div>
+      <div>
+        <div class="meal-name">Almoço</div>
+        <span class="meal-time">12:30</span>
+      </div>
+    </div>
+    <div class="meal-kcal">345 <span>kcal</span></div>
   </div>
+  <div class="meal-table-wrap"><table class="meal-table"><thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (qtd · kcal equiv.)</th></tr></thead>
+    <tbody>
+      <tr><td class="food-name">Arroz branco cozido</td><td class="food-qty">50g</td><td class="food-kcal">65</td><td class="food-sub">Batata-doce cozida <strong>70g</strong><br>Macarrão integral cozido <strong>60g</strong><br>Aipim cozido <strong>50g</strong><br>Cuscuz cozido <strong>65g</strong><br>Inhame <strong>100g</strong><br>Batata inglesa <strong>120g</strong><br>Quinoa cozida <strong>65g</strong><br>Arroz integral <strong>50g</strong><br>Mandioquinha <strong>90g</strong><br>Batata baroa <strong>100g</strong></td></tr>
+      <tr><td class="food-name">Feijão carioca</td><td class="food-qty">70g (cozido)</td><td class="food-kcal">53</td><td class="food-sub">Feijão preto <strong>65g</strong><br>Lentilha cozida <strong>70g</strong><br>Grão-de-bico cozido <strong>60g</strong><br>Ervilha cozida <strong>75g</strong><br>Edamame <strong>55g</strong><br>Feijão fradinho <strong>65g</strong><br>Feijão branco <strong>65g</strong><br>Soja em grão <strong>40g</strong><br>Fava <strong>70g</strong><br>Guandu <strong>65g</strong></td></tr>
+      <tr><td class="food-name">Peito de frango grelhado</td><td class="food-qty">120g</td><td class="food-kcal">132</td><td class="food-sub">Atum em água <strong>130g</strong><br>Tilápia grelhada <strong>145g</strong><br>Salmão grelhado <strong>85g</strong><br>Patinho grelhado <strong>115g</strong><br>Lombo de porco <strong>100g</strong><br>Sardinha assada <strong>110g</strong><br>Merluza <strong>145g</strong><br>Filé mignon <strong>95g</strong><br>Ovos inteiros <strong>3 un</strong><br>Peixe branco <strong>145g</strong></td></tr>
+      <tr><td class="food-name">Verduras e vegetais</td><td class="food-qty">150g</td><td class="food-kcal">45</td><td class="food-sub">Couve<br>Brócolis<br>Cenoura<br>Abobrinha<br>Espinafre<br>Chuchu<br>Aspargos<br>Berinjela<br>Vagem<br>Couve-flor<br>Rúcula<br>Alface<br>Tomate<br>Pepino (qualquer combinação ~150g)</td></tr>
+      <tr><td class="food-name">Abacaxi</td><td class="food-qty">100g</td><td class="food-kcal">50</td><td class="food-sub">Melão <strong>150g</strong><br>Laranja <strong>100g</strong><br>Mamão <strong>115g</strong><br>Maçã <strong>100g</strong><br>Manga <strong>80g</strong><br>Morango <strong>130g</strong><br>Melancia <strong>170g</strong><br>Kiwi <strong>100g</strong><br>Pera <strong>100g</strong><br>Uva <strong>65g</strong></td></tr>
+    </tbody></table></div><div class="swipe-hint">← deslize →</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header"><div class="meal-header-left"><div class="meal-num">3</div><div><div class="meal-name">Lanche da Tarde</div><span class="meal-time">16:00</span></div></div><div class="meal-kcal">395 <span>kcal</span></div></div>
-    <div class="meal-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="meal-table"><thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (qtd · kcal equiv.)</th></tr></thead><tbody>
-      <tr><td class="food-name">Whey protein</td><td class="food-qty">30g (1 scoop)</td><td class="food-kcal">120</td><td class="food-sub">Frango grelhado <strong>90g · ~148kcal</strong><br>Atum em água <strong>100g · ~108kcal</strong><br>Claras <strong>5 un</strong> + 1 ovo inteiro<br>Iogurte grego desnatado <strong>200g · ~116kcal</strong><br>Cottage desnatado <strong>150g · ~105kcal</strong></td></tr>
-      <tr><td class="food-name">Granola sem açúcar</td><td class="food-qty">30g</td><td class="food-kcal">120</td><td class="food-sub">Aveia em flocos <strong>30g · ~115kcal</strong><br>Tapioca (goma seca) <strong>55g · ~115kcal</strong><br>Flocão de milho <strong>34g · ~119kcal</strong><br>Mix de castanhas <strong>20g · ~124kcal</strong><br>Pão integral <strong>1½ fatia · ~111kcal</strong></td></tr>
-      <tr><td class="food-name">Frutas variadas</td><td class="food-qty">150g</td><td class="food-kcal">75</td><td class="food-sub">Morango · Banana · Maçã · Mamão · Melão · Uva · Kiwi (qualquer fruta a gosto ~150g)</td></tr>
-      <tr><td class="food-name">Iogurte zero</td><td class="food-qty">200ml</td><td class="food-kcal">80</td><td class="food-sub">Leite desnatado <strong>200ml · ~70kcal</strong><br>Kefir desnatado <strong>200ml · ~70kcal</strong><br>Iogurte grego desnatado <strong>130g · ~80kcal</strong><br>Cottage desnatado <strong>120g · ~84kcal</strong><br>Bebida vegetal sem açúcar <strong>250ml · ~70kcal</strong></td></tr>
-    </tbody></table>
-<div style="text-align:center;font-size:10px;color:rgba(245,240,232,0.5);padding:3px 0 10px;">← deslize →</div></div>
-    <div class="meal-obs-area"><textarea placeholder="Observações desta refeição..." data-key="meal-obs-3" onchange="saveObs(this)"></textarea></div>
+<div class="meal-card">
+  <div class="meal-header">
+    <div class="meal-header-left">
+      <div class="meal-num">3</div>
+      <div>
+        <div class="meal-name">Lanche da Tarde</div>
+        <span class="meal-time">16:00</span>
+      </div>
+    </div>
+    <div class="meal-kcal">355 <span>kcal</span></div>
   </div>
+  <div class="meal-table-wrap"><table class="meal-table"><thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (qtd · kcal equiv.)</th></tr></thead>
+    <tbody>
+      <tr><td class="food-name">Whey protein</td><td class="food-qty">30g (1 scoop)</td><td class="food-kcal">120</td><td class="food-sub">Frango grelhado <strong>90g</strong><br>Atum em água <strong>100g</strong><br>5 claras + 1 ovo<br>Iogurte grego natural <strong>200g</strong><br>Cottage <strong>150g</strong><br>Ricota <strong>130g</strong><br>Ovos inteiros <strong>3 un</strong><br>Peito de peru <strong>130g</strong><br>Ricota + castanhas<br>Salmão defumado <strong>90g</strong></td></tr>
+      <tr><td class="food-name">Granola sem açúcar</td><td class="food-qty">20g</td><td class="food-kcal">80</td><td class="food-sub">Aveia em flocos <strong>20g</strong><br>Tapioca <strong>40g</strong><br>Flocão de milho <strong>25g</strong><br>Mix de castanhas <strong>13g</strong><br>Biscoito de arroz <strong>2 un</strong><br>Pão integral <strong>1 fatia</strong><br>Batata-doce <strong>80g</strong><br>Muesli sem açúcar <strong>20g</strong><br>Panqueca de aveia<br>Wrap integral 1/2 un</td></tr>
+      <tr><td class="food-name">Frutas variadas</td><td class="food-qty">150g</td><td class="food-kcal">75</td><td class="food-sub">Morango<br>Banana<br>Maçã<br>Mamão<br>Melão<br>Uva<br>Kiwi<br>Pera<br>Manga<br>Melancia<br>Frutas vermelhas (qualquer fruta a gosto ~150g)</td></tr>
+      <tr><td class="food-name">Iogurte zero</td><td class="food-qty">200ml</td><td class="food-kcal">80</td><td class="food-sub">Leite desnatado <strong>200ml</strong><br>Kefir desnatado <strong>200ml</strong><br>Iogurte grego desnatado <strong>130g</strong><br>Cottage desnatado <strong>120g</strong><br>Bebida vegetal (amêndoas) <strong>200ml</strong><br>Leite sem lactose zero <strong>200ml</strong><br>Coalhada desnatada <strong>200ml</strong><br>Skyr <strong>130g</strong><br>Iogurte natural desnatado <strong>200g</strong><br>Leite de coco light <strong>150ml</strong></td></tr>
+    </tbody></table></div><div class="swipe-hint">← deslize →</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header"><div class="meal-header-left"><div class="meal-num">4</div><div><div class="meal-name">Jantar</div><span class="meal-time">20:00</span></div></div><div class="meal-kcal">372 <span>kcal</span></div></div>
-    <div class="meal-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="meal-table"><thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (qtd · kcal equiv.)</th></tr></thead><tbody>
-      <tr><td class="food-name">Arroz branco cozido</td><td class="food-qty">70g</td><td class="food-kcal">91</td><td class="food-sub">Batata-doce cozida <strong>100g · ~90kcal</strong><br>Macarrão integral cozido <strong>80g · ~93kcal</strong><br>Quinoa cozida <strong>90g · ~108kcal</strong><br>Aipim cozido <strong>70g · ~93kcal</strong><br>Inhame cozido <strong>85g · ~94kcal</strong></td></tr>
-      <tr><td class="food-name">Feijão carioca</td><td class="food-qty">70g (cozido)</td><td class="food-kcal">53</td><td class="food-sub">Feijão preto <strong>65g · ~58kcal</strong><br>Lentilha cozida <strong>70g · ~81kcal</strong><br>Grão-de-bico cozido <strong>60g · ~84kcal</strong><br>Ervilha cozida <strong>75g · ~62kcal</strong><br>Edamame <strong>55g · ~77kcal</strong></td></tr>
-      <tr><td class="food-name">Peito de frango grelhado</td><td class="food-qty">120g</td><td class="food-kcal">132</td><td class="food-sub">Atum em água <strong>130g · ~140kcal</strong><br>Tilápia grelhada <strong>145g · ~160kcal</strong><br>Salmão grelhado <strong>85g · ~170kcal</strong><br>Sardinha assada <strong>110g · ~153kcal</strong><br>Lombo de porco <strong>110g · ~143kcal</strong></td></tr>
-      <tr><td class="food-name">Verduras e vegetais</td><td class="food-qty">150g</td><td class="food-kcal">45</td><td class="food-sub">Brócolis · Couve-flor · Abobrinha · Cenoura · Espinafre · Aspargos (qualquer combinação ~150g)</td></tr>
-      <tr><td class="food-name">Abacaxi</td><td class="food-qty">100g</td><td class="food-kcal">50</td><td class="food-sub">Melão <strong>150g · ~45kcal</strong><br>Laranja <strong>100g · ~47kcal</strong><br>Mamão <strong>115g · ~49kcal</strong><br>Maçã <strong>100g · ~52kcal</strong><br>Manga <strong>80g · ~50kcal</strong></td></tr>
-    </tbody></table>
-<div style="text-align:center;font-size:10px;color:rgba(245,240,232,0.5);padding:3px 0 10px;">← deslize →</div></div>
-    <div class="meal-obs-area"><textarea placeholder="Observações desta refeição..." data-key="meal-obs-4" onchange="saveObs(this)"></textarea></div>
+<div class="meal-card">
+  <div class="meal-header">
+    <div class="meal-header-left">
+      <div class="meal-num">4</div>
+      <div>
+        <div class="meal-name">Jantar</div>
+        <span class="meal-time">20:00</span>
+      </div>
+    </div>
+    <div class="meal-kcal">345 <span>kcal</span></div>
   </div>
+  <div class="meal-table-wrap"><table class="meal-table"><thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (qtd · kcal equiv.)</th></tr></thead>
+    <tbody>
+      <tr><td class="food-name">Arroz branco cozido</td><td class="food-qty">50g</td><td class="food-kcal">65</td><td class="food-sub">Batata-doce cozida <strong>70g</strong><br>Macarrão integral cozido <strong>60g</strong><br>Aipim cozido <strong>50g</strong><br>Cuscuz cozido <strong>65g</strong><br>Inhame <strong>100g</strong><br>Batata inglesa <strong>120g</strong><br>Quinoa cozida <strong>65g</strong><br>Arroz integral <strong>50g</strong><br>Mandioquinha <strong>90g</strong><br>Batata baroa <strong>100g</strong></td></tr>
+      <tr><td class="food-name">Feijão carioca</td><td class="food-qty">70g (cozido)</td><td class="food-kcal">53</td><td class="food-sub">Feijão preto <strong>65g</strong><br>Lentilha cozida <strong>70g</strong><br>Grão-de-bico cozido <strong>60g</strong><br>Ervilha cozida <strong>75g</strong><br>Edamame <strong>55g</strong><br>Feijão fradinho <strong>65g</strong><br>Feijão branco <strong>65g</strong><br>Soja em grão <strong>40g</strong><br>Fava <strong>70g</strong><br>Guandu <strong>65g</strong></td></tr>
+      <tr><td class="food-name">Peito de frango grelhado</td><td class="food-qty">120g</td><td class="food-kcal">132</td><td class="food-sub">Atum em água <strong>130g</strong><br>Tilápia grelhada <strong>145g</strong><br>Salmão grelhado <strong>85g</strong><br>Patinho grelhado <strong>115g</strong><br>Sardinha assada <strong>110g</strong><br>Lombo de porco <strong>100g</strong><br>Merluza <strong>145g</strong><br>Filé mignon <strong>95g</strong><br>Ovos inteiros <strong>3 un</strong><br>Peixe branco <strong>145g</strong></td></tr>
+      <tr><td class="food-name">Verduras e vegetais</td><td class="food-qty">150g</td><td class="food-kcal">45</td><td class="food-sub">Brócolis<br>Couve-flor<br>Abobrinha<br>Cenoura<br>Espinafre<br>Aspargos<br>Berinjela<br>Vagem<br>Couve<br>Chuchu<br>Rúcula<br>Alface<br>Tomate<br>Pepino (qualquer combinação ~150g)</td></tr>
+      <tr><td class="food-name">Abacaxi</td><td class="food-qty">100g</td><td class="food-kcal">50</td><td class="food-sub">Melão <strong>150g</strong><br>Laranja <strong>100g</strong><br>Mamão <strong>115g</strong><br>Maçã <strong>100g</strong><br>Manga <strong>80g</strong><br>Morango <strong>130g</strong><br>Melancia <strong>170g</strong><br>Kiwi <strong>100g</strong><br>Pera <strong>100g</strong><br>Uva <strong>65g</strong></td></tr>
+    </tbody></table></div><div class="swipe-hint">← deslize →</div>
+</div>
 
-  <!-- BIBLIOTECA COMPLETA -->
-  <div class="section-header" style="margin-top:46px;"><h2>Biblioteca de <span>Conscientização</span></h2><div class="section-line"></div></div>
-  <div class="biblio-block">
-    <div class="biblio-block-title">🥗 Orientações Nutricionais</div>
-    <div class="biblio-item"><div class="biblio-tag">🥦 Vegetais e Legumes</div><p>Inclua no seu dia alimentos como brócolis, cenoura, vagem, chuchu, abobrinha, beterraba, aspargos, abóbora, quiabo e outros. Seja criativa no preparo: cozidos, grelhados, assados, no vapor, airfryer, purês ou saladas frias. Use legumes como volume alimentar — eles ajudam na saciedade sem comprometer as calorias.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/reel/DGdZtUgx9nH/?igsh=bGszbXhnNDc2cjh6" target="_blank" class="ig-link">▶ Vegetais e micronutrientes</a></div></div>
-    <div class="biblio-item"><div class="biblio-tag">🥗 Saladas e Temperos</div><p>Saladas verdes (alface, rúcula, agrião etc.) podem ser consumidas à vontade. Use azeite apenas nas refeições indicadas. Varie combinações e use temperos como curry, páprica, chimichurri e ervas frescas para reduzir o sal e manter o sabor.</p></div>
-    <div class="biblio-item"><div class="biblio-tag">🍳 Modo de Preparo</div><p>Ovos: mexidos, cozidos, omelete ou panqueca proteica. Frango: grelhado, desfiado, assado, em cubos. Batatas: cozidas, assadas, purê ou airfryer. Feijão e grão-de-bico: ensopados, saladas frias ou homus. O segredo é variar o preparo para manter a dieta prática e sem monotonia.</p></div>
-    <div class="biblio-item"><div class="biblio-tag">💧 Hidratação</div><p>Aumente seu consumo para pelo menos 2,5 litros de água por dia. Café preto sem açúcar pode à vontade — evite após as 16h. Evite bebidas calóricas como refrigerantes e álcool.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/reel/DHTQjMIxpXv/?igsh=aGw5OXZwbmZzdGp0" target="_blank" class="ig-link">▶ Hidratação e performance</a></div></div>
-    <div class="biblio-item"><div class="biblio-tag">🧂 Sal e Intervalos</div><p>Tempere os alimentos normalmente. Faça as refeições com intervalos de 3 a 4 horas. Evite ficar mais de 5 horas sem comer — o jejum não planejado aumenta a fome e favorece escolhas ruins.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/p/DD7RBO5Rn8u/" target="_blank" class="ig-link">▶ Intervalos e horários</a></div></div>
-    <div class="biblio-item"><div class="biblio-tag">📅 Dias Sem Treino</div><p>Nos dias sem musculação, faça pelo menos 30 a 40 minutos de atividade aeróbica. Mantenha normalmente as frutas, legumes e fontes de proteínas. Não reduza drasticamente a alimentação nesses dias.</p></div>
-    <div class="biblio-item"><div class="biblio-tag">💊 Suplementação</div><p>Continue com o Whey Isofort Beauty nas refeições indicadas. Mantenha o Vitergan Master N e o Cálcio 2000 UI conforme orientação médica. Creatina 5g ao dia pode ser adicionada — efeito acumulativo. Ômega 3: 1g ao dia (EPA + DHA).</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/reel/DJZ_bmByh0g/" target="_blank" class="ig-link">▶ Guia de suplementação</a><a href="https://www.instagram.com/p/DI1V0hqRXMQ/" target="_blank" class="ig-link">▶ Benefícios da creatina</a></div></div>
-    <div class="biblio-item"><div class="biblio-tag">🍽️ Refeição Livre</div><p>1 a 2 refeições livres por semana, de forma planejada e consciente. Escolha um momento social, aproveite com prazer e volte ao plano normalmente na próxima refeição.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/reel/DNGS8cSRS5X/" target="_blank" class="ig-link">▶ Refeição livre inteligente</a></div></div>
-    <div class="biblio-item"><div class="biblio-tag">🚫 Álcool</div><p>Evitar ou reduzir ao máximo. O álcool bloqueia a queima de gordura, prejudica a recuperação muscular, piora o sono e afeta o equilíbrio hormonal — especialmente relevante na sua fase de reposição hormonal atual.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/p/DI4b3FnSxAz/" target="_blank" class="ig-link">▶ Álcool e metabolismo</a><a href="https://www.instagram.com/p/DH1zPPIvjfl/" target="_blank" class="ig-link">▶ Os prejuízos do álcool</a></div></div>
-  </div>
-  <div class="biblio-block">
-    <div class="biblio-block-title">🧠 Orientações Comportamentais</div>
-    <div class="biblio-item"><div class="biblio-tag">📋 Planejamento</div><p>Tenha suas refeições prontas com antecedência. Mantenha horários fixos para treinar, comer e descansar. Antecipe desafios e crie estratégias para não sair do plano.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/reel/DN1T1hF4gf-/" target="_blank" class="ig-link">▶ Hábitos fixos e rotina</a></div></div>
-    <div class="biblio-item"><div class="biblio-tag">🏠 Ambiente e Disciplina</div><p>Evite ambientes que atrapalhem sua dieta. Compartilhe seus objetivos com pessoas próximas. Disciplina é mais importante que motivação — ela aparece mesmo quando a vontade não está presente.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/p/DGAlIGuRb3Q/" target="_blank" class="ig-link">▶ Seu ambiente te ajuda?</a></div></div>
-    <div class="biblio-item"><div class="biblio-tag">💡 Consciência e Ação</div><p>Não espere o momento perfeito para agir. Antes de sair do plano, pergunte-se: "Isso está alinhado com meus objetivos?" Tenha marmitas prontas, carregue lanches práticos e saiba usar as substituições do plano.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/reel/DOgG7RTkYOx/" target="_blank" class="ig-link">▶ Executar em meio ao caos</a><a href="https://www.instagram.com/reel/DIgvrSWtLYo/" target="_blank" class="ig-link">▶ Gatilhos emocionais</a></div></div>
-    <div class="biblio-item"><div class="biblio-tag">🔁 Persistência e Adesão</div><p>Se sair da dieta em uma refeição, volte normalmente na próxima sem compensar. O sono adequado (7 a 9 horas por noite) é essencial para recuperação e evolução. Adapte sem abandonar.</p><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;"><a href="https://www.instagram.com/reel/DHqfIjkxlM7/" target="_blank" class="ig-link">▶ Constância vence intensidade</a><a href="https://www.instagram.com/reel/DFWInLyvtS0/" target="_blank" class="ig-link">▶ Saúde mental e sono</a></div></div>
-  </div>
-  <div class="section-header" style="margin-top:28px;"><h2>Biblioteca de <span>Vídeos</span></h2><div class="section-line"></div></div>
-  <div class="video-library">
-    <a href="https://www.instagram.com/reel/DN1T1hF4gf-/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Hábitos fixos que transformam resultados</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-    <a href="https://www.instagram.com/reel/DHqfIjkxlM7/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Constância vence intensidade</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-    <a href="https://www.instagram.com/reel/DIzjTBhSr95/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Organização alimentar e déficit</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-    <a href="https://www.instagram.com/reel/DOgG7RTkYOx/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Não espere o momento perfeito</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-    <a href="https://www.instagram.com/reel/DNGS8cSRS5X/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Refeição livre inteligente</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-    <a href="https://www.instagram.com/reel/DOY2YvMEbxP/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Benefícios do cardio</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-    <a href="https://www.instagram.com/p/DI4b3FnSxAz/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Álcool e metabolismo</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-    <a href="https://www.instagram.com/p/DI1V0hqRXMQ/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Benefícios da creatina</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-    <a href="https://www.instagram.com/reel/DJZ_bmByh0g/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Guia de suplementação</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-    <a href="https://www.instagram.com/reel/DHTQjMIxpXv/" target="_blank" class="video-card"><div class="video-icon">▶</div><div><div class="video-title">Hidratação e performance</div><div class="video-source">Instagram · Luan Barreto</div></div></a>
-  </div>
 </section>
+
+
 <section id="treino" class="section">
   <div class="section-header"><h2>Planejamento de <span>Treino</span></h2><div class="section-line"></div></div>
-  <div class="logica-box" style="background:rgba(201,168,76,0.06);border:1px solid var(--border);border-radius:4px;padding:12px 16px;margin-bottom:18px;font-size:11px;color:var(--white-dim);line-height:1.9;">
-    📋 <strong style="color:var(--white)">Full Body 5×/semana:</strong> Cada treino trabalha o corpo inteiro com ênfase diferente · Bi-sets marcados com ↔ · 2 exercícios sem pausa entre eles, descansa depois<br>
-    ⏱️ <strong style="color:var(--white)">Descanso entre séries:</strong> 60–90s exercícios compostos · 45–60s isolados · Bi-sets: descanso só após o par
+    <div class="plano-tabs" style="display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;padding-bottom:6px;flex-wrap:nowrap;"><button class="plano-tab" onclick="showPlano('plano1',this)" style="padding:8px 14px;background:var(--dark2);border:1px solid var(--border);color:var(--white-dim);border-radius:4px;font-size:11px;cursor:pointer;font-family:inherit;white-space:nowrap;flex-shrink:0;min-height:36px;">📋 Plano 1</button><button class="plano-tab active" onclick="showPlano('plano2',this)" style="padding:8px 14px;background:var(--gold);border:1px solid var(--gold);color:var(--dark);border-radius:4px;font-size:11px;cursor:pointer;font-weight:600;font-family:inherit;white-space:nowrap;flex-shrink:0;min-height:36px;">✅ Plano 2 (ativo)</button></div><div id="plano1" class="plano-content"><div style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:11px;color:var(--white-dim);">📋 <strong style="color:var(--white)">Plano 1 — Histórico</strong> · treinos anteriores (20/04–04/08/2026) preservados como referência</div><div class="treino-tabs">
+    <button class="treino-tab active" onclick="showSubTreino('p1TA',this,'plano1')">Full Body A</button>
+    <button class="treino-tab" onclick="showSubTreino('p1TB',this,'plano1')">Full Body B</button>
+    <button class="treino-tab" onclick="showSubTreino('p1TC',this,'plano1')">Full Body C</button>
+    <button class="treino-tab" onclick="showSubTreino('p1TD',this,'plano1')">Full Body D</button>
+    <button class="treino-tab" onclick="showSubTreino('p1TE',this,'plano1')">Full Body E</button>
   </div>
-  <div class="treino-tabs">
-    <button class="treino-tab active" onclick="showTreino('A',this)">Full Body A</button>
-    <button class="treino-tab" onclick="showTreino('B',this)">Full Body B</button>
-    <button class="treino-tab" onclick="showTreino('C',this)">Full Body C</button>
-    <button class="treino-tab" onclick="showTreino('D',this)">Full Body D</button>
-    <button class="treino-tab" onclick="showTreino('E',this)">Full Body E</button>
-  </div>
-  <div id="treino-A" class="treino-content active">
+  <div id="p1TA" class="sub-treino-content active">
     <div class="treino-header"><div><div class="treino-title">Full Body <span style="color:var(--gold)">A</span></div></div><div class="treino-day">🔵 Treino 1</div></div>
     <div class="treino-actions"><button class="btn-done" id="done-treino-A" onclick="markDone('treino-A')">✓ Concluído</button><button class="btn-timer" onclick="openTimer()">⏱ Timer</button><span class="done-badge" id="done-badge-treino-A"></span></div>
     <div class="warmup-block warmup-inferior"><div class="warmup-icon">⚙️</div><div class="warmup-content"><div class="warmup-title" style="color:var(--green);">Regra de Progressão — Obrigatória</div><div style="font-size:11px;color:var(--white-dim);line-height:1.9;margin-bottom:10px;">Nunca comece com a carga máxima. As séries são <strong style="color:var(--white)">progressivas</strong> — aumente a carga a cada série desde que continue atingindo falha nas reps prescritas.</div><div class="warmup-steps"><div class="warmup-step"><span class="step-num">1ª</span><span class="step-text"><strong>Aquecimento:</strong> carga bem leve · algumas reps · sem falhar</span></div><div class="warmup-step"><span class="step-num">2ª+</span><span class="step-text"><strong>Progrida</strong> a carga até atingir falha nas reps prescritas</span></div></div><div style="background:rgba(0,0,0,0.2);border-radius:3px;padding:8px 12px;margin-top:8px;font-size:10px;color:var(--white-dim);">Exemplo 4×8–10: S1 20kg leve → S2 30kg → S3 35kg → S4 40kg até falha</div><div class="warmup-videos-title" style="margin-top:10px;">📱 Mobilidade — Inferiores</div><div class="warmup-videos"><a href="https://drive.google.com/file/d/1WJfflEMvAwbFIeeyLRoiT6IypcqkyHRs/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 1</a><a href="https://drive.google.com/file/d/16cq7ROyClZ90yE0MP6F4eE82jDVcSWKc/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 2</a></div></div></div>
@@ -676,7 +687,7 @@ textarea.q-input{resize:vertical;min-height:80px;}
 <tr><td class="ex-name">Cadeira Flexora</td><td class="ex-series">3</td><td class="ex-reps">12–15</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t1-ex5" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t1','ex5','Cadeira Flexora')">📊</button></td><td><a href="https://drive.google.com/file/d/1sirxKDE_YlDKDSROYD3d83raodQW-2TD/view" target="_blank" class="yt-link">▶ VER</a></td></tr>
 <tr><td class="ex-name">Desenvolvimento com Halteres em Pé</td><td class="ex-series">3</td><td class="ex-reps">10–12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t1-ex6" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t1','ex6','Desenvolvimento com Halteres em Pé')">📊</button></td><td><a href="https://www.youtube.com/results?search_query=Desenvolvimento+com+Halteres+em+Pé" target="_blank" class="yt-link">▶ VER</a></td></tr></tbody></table><div class="swipe-hint">← deslize →</div></div>
   </div>
-  <div id="treino-B" class="treino-content">
+  <div id="p1TB" class="sub-treino-content">
     <div class="treino-header"><div><div class="treino-title">Full Body <span style="color:var(--gold)">B</span></div></div><div class="treino-day">🟢 Treino 2</div></div>
     <div class="treino-actions"><button class="btn-done" id="done-treino-B" onclick="markDone('treino-B')">✓ Concluído</button><button class="btn-timer" onclick="openTimer()">⏱ Timer</button><span class="done-badge" id="done-badge-treino-B"></span></div>
     <div class="warmup-block warmup-inferior"><div class="warmup-icon">⚙️</div><div class="warmup-content"><div class="warmup-title" style="color:var(--green);">Regra de Progressão — Obrigatória</div><div style="font-size:11px;color:var(--white-dim);line-height:1.9;margin-bottom:10px;">Nunca comece com a carga máxima. As séries são <strong style="color:var(--white)">progressivas</strong> — aumente a carga a cada série desde que continue atingindo falha nas reps prescritas.</div><div class="warmup-steps"><div class="warmup-step"><span class="step-num">1ª</span><span class="step-text"><strong>Aquecimento:</strong> carga bem leve · algumas reps · sem falhar</span></div><div class="warmup-step"><span class="step-num">2ª+</span><span class="step-text"><strong>Progrida</strong> a carga até atingir falha nas reps prescritas</span></div></div><div style="background:rgba(0,0,0,0.2);border-radius:3px;padding:8px 12px;margin-top:8px;font-size:10px;color:var(--white-dim);">Exemplo 4×8–10: S1 20kg leve → S2 30kg → S3 35kg → S4 40kg até falha</div><div class="warmup-videos-title" style="margin-top:10px;">📱 Mobilidade — Inferiores</div><div class="warmup-videos"><a href="https://drive.google.com/file/d/1WJfflEMvAwbFIeeyLRoiT6IypcqkyHRs/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 1</a><a href="https://drive.google.com/file/d/16cq7ROyClZ90yE0MP6F4eE82jDVcSWKc/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 2</a></div></div></div>
@@ -690,7 +701,7 @@ textarea.q-input{resize:vertical;min-height:80px;}
 <tr><td class="ex-name">Rosca Direta com Halteres</td><td class="ex-series">3</td><td class="ex-reps">12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t2-ex7" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t2','ex7','Rosca Direta com Halteres')">📊</button></td><td><a href="https://drive.google.com/file/d/1THTclIW1YtUhy65_lt-Hjf6bJJXHWACd/view" target="_blank" class="yt-link">▶ VER</a></td></tr>
 <tr><td class="ex-name">Cadeira Extensora</td><td class="ex-series">3</td><td class="ex-reps">12–15</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t2-ex8" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t2','ex8','Cadeira Extensora')">📊</button></td><td><a href="https://drive.google.com/file/d/1aKS23cs1BEP498KggFcpwSEPs9Jefpyi/view" target="_blank" class="yt-link">▶ VER</a></td></tr></tbody></table><div class="swipe-hint">← deslize →</div></div>
   </div>
-  <div id="treino-C" class="treino-content">
+  <div id="p1TC" class="sub-treino-content">
     <div class="treino-header"><div><div class="treino-title">Full Body <span style="color:var(--gold)">C</span></div></div><div class="treino-day">🟣 Treino 3</div></div>
     <div class="treino-actions"><button class="btn-done" id="done-treino-C" onclick="markDone('treino-C')">✓ Concluído</button><button class="btn-timer" onclick="openTimer()">⏱ Timer</button><span class="done-badge" id="done-badge-treino-C"></span></div>
     <div class="warmup-block warmup-inferior"><div class="warmup-icon">⚙️</div><div class="warmup-content"><div class="warmup-title" style="color:var(--green);">Regra de Progressão — Obrigatória</div><div style="font-size:11px;color:var(--white-dim);line-height:1.9;margin-bottom:10px;">Nunca comece com a carga máxima. As séries são <strong style="color:var(--white)">progressivas</strong> — aumente a carga a cada série desde que continue atingindo falha nas reps prescritas.</div><div class="warmup-steps"><div class="warmup-step"><span class="step-num">1ª</span><span class="step-text"><strong>Aquecimento:</strong> carga bem leve · algumas reps · sem falhar</span></div><div class="warmup-step"><span class="step-num">2ª+</span><span class="step-text"><strong>Progrida</strong> a carga até atingir falha nas reps prescritas</span></div></div><div style="background:rgba(0,0,0,0.2);border-radius:3px;padding:8px 12px;margin-top:8px;font-size:10px;color:var(--white-dim);">Exemplo 4×8–10: S1 20kg leve → S2 30kg → S3 35kg → S4 40kg até falha</div><div class="warmup-videos-title" style="margin-top:10px;">📱 Mobilidade — Inferiores</div><div class="warmup-videos"><a href="https://drive.google.com/file/d/1WJfflEMvAwbFIeeyLRoiT6IypcqkyHRs/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 1</a><a href="https://drive.google.com/file/d/16cq7ROyClZ90yE0MP6F4eE82jDVcSWKc/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 2</a></div></div></div>
@@ -703,7 +714,7 @@ textarea.q-input{resize:vertical;min-height:80px;}
 <tr><td class="ex-name">Elevação Frontal com Halteres</td><td class="ex-series">3</td><td class="ex-reps">12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t3-ex6" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t3','ex6','Elevação Frontal com Halteres')">📊</button></td><td><a href="https://drive.google.com/file/d/1nxrBTIn4tgbt_gSY1JroWfAiFIj7HjrW/view" target="_blank" class="yt-link">▶ VER</a></td></tr>
 <tr><td class="ex-name">Agachamento Búlgaro</td><td class="ex-series">3</td><td class="ex-reps">10 cada</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t3-ex7" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t3','ex7','Agachamento Búlgaro')">📊</button></td><td><a href="https://drive.google.com/file/d/1wNOFLYKFyw3IySztAtCp3NHitn2e823w/view" target="_blank" class="yt-link">▶ VER</a></td></tr></tbody></table><div class="swipe-hint">← deslize →</div></div>
   </div>
-  <div id="treino-D" class="treino-content">
+  <div id="p1TD" class="sub-treino-content">
     <div class="treino-header"><div><div class="treino-title">Full Body <span style="color:var(--gold)">D</span></div></div><div class="treino-day">🔴 Treino 4</div></div>
     <div class="treino-actions"><button class="btn-done" id="done-treino-D" onclick="markDone('treino-D')">✓ Concluído</button><button class="btn-timer" onclick="openTimer()">⏱ Timer</button><span class="done-badge" id="done-badge-treino-D"></span></div>
     <div class="warmup-block warmup-inferior"><div class="warmup-icon">⚙️</div><div class="warmup-content"><div class="warmup-title" style="color:var(--green);">Regra de Progressão — Obrigatória</div><div style="font-size:11px;color:var(--white-dim);line-height:1.9;margin-bottom:10px;">Nunca comece com a carga máxima. As séries são <strong style="color:var(--white)">progressivas</strong> — aumente a carga a cada série desde que continue atingindo falha nas reps prescritas.</div><div class="warmup-steps"><div class="warmup-step"><span class="step-num">1ª</span><span class="step-text"><strong>Aquecimento:</strong> carga bem leve · algumas reps · sem falhar</span></div><div class="warmup-step"><span class="step-num">2ª+</span><span class="step-text"><strong>Progrida</strong> a carga até atingir falha nas reps prescritas</span></div></div><div style="background:rgba(0,0,0,0.2);border-radius:3px;padding:8px 12px;margin-top:8px;font-size:10px;color:var(--white-dim);">Exemplo 4×8–10: S1 20kg leve → S2 30kg → S3 35kg → S4 40kg até falha</div><div class="warmup-videos-title" style="margin-top:10px;">📱 Mobilidade — Inferiores</div><div class="warmup-videos"><a href="https://drive.google.com/file/d/1WJfflEMvAwbFIeeyLRoiT6IypcqkyHRs/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 1</a><a href="https://drive.google.com/file/d/16cq7ROyClZ90yE0MP6F4eE82jDVcSWKc/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 2</a></div></div></div>
@@ -715,7 +726,7 @@ textarea.q-input{resize:vertical;min-height:80px;}
 <tr><td class="ex-name">Leg Press 45</td><td class="ex-series">4</td><td class="ex-reps">12–15</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t4-ex5" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t4','ex5','Leg Press 45')">📊</button></td><td><a href="https://www.youtube.com/results?search_query=Leg+Press+45" target="_blank" class="yt-link">▶ VER</a></td></tr>
 <tr><td class="ex-name">Rosca Martelo com Halteres</td><td class="ex-series">3</td><td class="ex-reps">12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t4-ex6" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t4','ex6','Rosca Martelo com Halteres')">📊</button></td><td><a href="https://drive.google.com/file/d/1UU-_tq8q3zdmZBMChM3nnaJNOtqWeKD0/view" target="_blank" class="yt-link">▶ VER</a></td></tr></tbody></table><div class="swipe-hint">← deslize →</div></div>
   </div>
-  <div id="treino-E" class="treino-content">
+  <div id="p1TE" class="sub-treino-content">
     <div class="treino-header"><div><div class="treino-title">Full Body <span style="color:var(--gold)">E</span></div></div><div class="treino-day">⭐ Treino 5</div></div>
     <div class="treino-actions"><button class="btn-done" id="done-treino-E" onclick="markDone('treino-E')">✓ Concluído</button><button class="btn-timer" onclick="openTimer()">⏱ Timer</button><span class="done-badge" id="done-badge-treino-E"></span></div>
     <div class="warmup-block warmup-inferior"><div class="warmup-icon">⚙️</div><div class="warmup-content"><div class="warmup-title" style="color:var(--green);">Regra de Progressão — Obrigatória</div><div style="font-size:11px;color:var(--white-dim);line-height:1.9;margin-bottom:10px;">Nunca comece com a carga máxima. As séries são <strong style="color:var(--white)">progressivas</strong> — aumente a carga a cada série desde que continue atingindo falha nas reps prescritas.</div><div class="warmup-steps"><div class="warmup-step"><span class="step-num">1ª</span><span class="step-text"><strong>Aquecimento:</strong> carga bem leve · algumas reps · sem falhar</span></div><div class="warmup-step"><span class="step-num">2ª+</span><span class="step-text"><strong>Progrida</strong> a carga até atingir falha nas reps prescritas</span></div></div><div style="background:rgba(0,0,0,0.2);border-radius:3px;padding:8px 12px;margin-top:8px;font-size:10px;color:var(--white-dim);">Exemplo 4×8–10: S1 20kg leve → S2 30kg → S3 35kg → S4 40kg até falha</div><div class="warmup-videos-title" style="margin-top:10px;">📱 Mobilidade — Inferiores</div><div class="warmup-videos"><a href="https://drive.google.com/file/d/1WJfflEMvAwbFIeeyLRoiT6IypcqkyHRs/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 1</a><a href="https://drive.google.com/file/d/16cq7ROyClZ90yE0MP6F4eE82jDVcSWKc/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 2</a></div></div></div>
@@ -724,62 +735,123 @@ textarea.q-input{resize:vertical;min-height:80px;}
 <tr style="background:rgba(201,168,76,0.04);"><td class="ex-name"><strong>Agachamento Frontal com Halteres</strong> ↔ Desenvolvimento com Halteres em Pé<div class="ex-alt"><span>Bi-set</span></div></td><td class="ex-series">4</td><td class="ex-reps">10–12 cada</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t5-ex2" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t5','ex2','Agachamento Frontal com Halteres')">📊</button></td><td><a href="https://www.youtube.com/results?search_query=Agachamento+Frontal+com+Halteres" target="_blank" class="yt-link">▶ VER</a><br><a href="https://www.youtube.com/results?search_query=Desenvolvimento+com+Halteres+em+Pé" target="_blank" class="yt-link" style="margin-top:4px;display:inline-block;">▶ VER</a></td></tr>
 <tr style="background:rgba(201,168,76,0.04);"><td class="ex-name"><strong>Mesa Flexora</strong> ↔ Flexão de Braços no Chão<div class="ex-alt"><span>Bi-set</span></div></td><td class="ex-series">3</td><td class="ex-reps">10–12 cada</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-t5-ex3" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('t5','ex3','Mesa Flexora')">📊</button></td><td><a href="https://drive.google.com/file/d/1sirxKDE_YlDKDSROYD3d83raodQW-2TD/view" target="_blank" class="yt-link">▶ VER</a><br><a href="https://www.youtube.com/results?search_query=Flexão+de+Braços+no+Chão" target="_blank" class="yt-link" style="margin-top:4px;display:inline-block;">▶ VER</a></td></tr></tbody></table><div class="swipe-hint">← deslize →</div></div>
   </div>
+</div>
+<div id="plano2" class="plano-content active"><div style="background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.02));border:1px solid rgba(201,168,76,0.35);border-radius:6px;padding:16px 20px;margin-bottom:14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;"><span style="font-size:16px;">✅</span><span style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);">Plano 2 — Ativo (a partir de 10/08/2026)</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;"><strong style="color:var(--white)">4 treinos Full Body/semana</strong> · intercalando inferior/superior · <strong style="color:var(--white)">3 blocos de cardio por treino</strong> (início · meio · fim) — varia entre aquecimento contínuo, HIIT, sprint e piramidal.<br>O cardio integrado ao treino <strong style="color:var(--white)">substitui parte das sessões extras dedicadas</strong> e aumenta o gasto calórico total.</div></div><div class="treino-tabs"><button class="treino-tab active" onclick="showSubTreino('p2TA',this,'plano2')">Treino A</button><button class="treino-tab" onclick="showSubTreino('p2TB',this,'plano2')">Treino B</button><button class="treino-tab" onclick="showSubTreino('p2TC',this,'plano2')">Treino C</button><button class="treino-tab" onclick="showSubTreino('p2TD',this,'plano2')">Treino D</button></div><div id="p2TA" class="sub-treino-content active"><div class="treino-header"><div><div class="treino-title"><span style="color:var(--gold)">Treino A — Posterior + Pull</span></div><div style="font-size:10px;color:var(--white-dim);margin-top:4px;">Cardio progressivo · aquecimento → HIIT → sprint</div></div><div class="treino-day">Full Body</div></div><div class="treino-actions"><button class="btn-done" id="done-p2TA" onclick="markDone('p2TA')">✓ Concluído</button><button class="btn-timer" onclick="openTimer()">⏱ Timer</button><span class="done-badge" id="done-badge-p2TA"></span></div><div class="warmup-block warmup-inferior"><div class="warmup-icon">⚙️</div><div class="warmup-content"><div class="warmup-title" style="color:var(--green);">Regra de Progressão — Obrigatória</div><div style="font-size:11px;color:var(--white-dim);line-height:1.9;margin-bottom:10px;">Nunca comece com a carga máxima. As séries são <strong style="color:var(--white)">progressivas</strong> — aumente a carga a cada série desde que continue atingindo falha nas reps prescritas.</div><div class="warmup-steps"><div class="warmup-step"><span class="step-num">1ª</span><span class="step-text"><strong>Aquecimento:</strong> carga bem leve · algumas reps · sem falhar</span></div><div class="warmup-step"><span class="step-num">2ª+</span><span class="step-text"><strong>Progrida</strong> a carga até atingir falha nas reps prescritas</span></div></div><div style="background:rgba(0,0,0,0.2);border-radius:3px;padding:8px 12px;margin-top:8px;font-size:10px;color:var(--white-dim);">Exemplo 4×8–10: S1 20kg leve → S2 30kg → S3 35kg → S4 40kg até falha</div><div class="warmup-videos-title" style="margin-top:10px;">📱 Mobilidade — Inferiores</div><div class="warmup-videos"><a href="https://drive.google.com/file/d/1WJfflEMvAwbFIeeyLRoiT6IypcqkyHRs/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 1</a><a href="https://drive.google.com/file/d/16cq7ROyClZ90yE0MP6F4eE82jDVcSWKc/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 2</a></div></div></div><div class="logica-box"><strong>⚙️ Progressão:</strong> foque em <strong>manter técnica</strong> · não pule cardio (é parte do treino) · RIR 1-2 (nunca falha) <span style="color:var(--gold);">→</span> Cardio + musculação = mais gasto calórico total.</div><div class="meal-card"><table class="exercise-table"><thead><tr><th>Exercício / Bloco</th><th>Séries</th><th>Reps</th><th>Carga</th><th>Vídeo</th></tr></thead><tbody><tr style="background:rgba(34,197,94,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">🚴</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(34,197,94);font-weight:500;">🟢 Cardio 1 — AirBike Aquecimento</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">3 min contínuo em Zona 2 · aquecer o sistema · RPE 3-4</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Elevação de Quadril com Barra</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TA-ex1" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TA','ex1','Elevação de Quadril com Barra')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Elevação+de+Quadril+com+Barra" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Remada Baixa Triângulo</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TA-ex2" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TA','ex2','Remada Baixa Triângulo')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Remada+Baixa+Triângulo" class="yt-link">▶ VER</a></td></tr>
+<tr style="background:rgba(248,113,113,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">🔥</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(248,113,113);font-weight:500;">🔥 Cardio 2 — AirBike HIIT</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">3 min · 30s forte (RPE 7-8) / 30s leve · 3 rounds</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Cadeira Flexora</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TA-ex3" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TA','ex3','Cadeira Flexora')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Cadeira+Flexora" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Puxada Aberta na Polia</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TA-ex4" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TA','ex4','Puxada Aberta na Polia')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Puxada+Aberta+na+Polia" class="yt-link">▶ VER</a></td></tr>
+<tr style="background:rgba(234,179,8,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">⚡</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(234,179,8);font-weight:500;">⚡ Cardio 3 — Remo Sprint</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">2 min · 20s forte / 40s leve · 2 rounds · fecha o treino</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Desenvolvimento com Halteres em Pé</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TA-ex5" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TA','ex5','Desenvolvimento com Halteres em Pé')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Desenvolvimento+com+Halteres+em+Pé" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Tríceps na Polia com Corda</td><td class="ex-series">3</td><td class="ex-reps">12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TA-ex6" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TA','ex6','Tríceps na Polia com Corda')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Tríceps+na+Polia+com+Corda" class="yt-link">▶ VER</a></td></tr></tbody></table><div class="swipe-hint">← deslize →</div></div></div>
+<div id="p2TB" class="sub-treino-content"><div class="treino-header"><div><div class="treino-title"><span style="color:var(--gold)">Treino B — Quadríceps + Push</span></div><div style="font-size:10px;color:var(--white-dim);margin-top:4px;">Aquecimento → HIIT clássico → sprint · intercalando inf/sup</div></div><div class="treino-day">Full Body</div></div><div class="treino-actions"><button class="btn-done" id="done-p2TB" onclick="markDone('p2TB')">✓ Concluído</button><button class="btn-timer" onclick="openTimer()">⏱ Timer</button><span class="done-badge" id="done-badge-p2TB"></span></div><div class="warmup-block warmup-inferior"><div class="warmup-icon">⚙️</div><div class="warmup-content"><div class="warmup-title" style="color:var(--green);">Regra de Progressão — Obrigatória</div><div style="font-size:11px;color:var(--white-dim);line-height:1.9;margin-bottom:10px;">Nunca comece com a carga máxima. As séries são <strong style="color:var(--white)">progressivas</strong> — aumente a carga a cada série desde que continue atingindo falha nas reps prescritas.</div><div class="warmup-steps"><div class="warmup-step"><span class="step-num">1ª</span><span class="step-text"><strong>Aquecimento:</strong> carga bem leve · algumas reps · sem falhar</span></div><div class="warmup-step"><span class="step-num">2ª+</span><span class="step-text"><strong>Progrida</strong> a carga até atingir falha nas reps prescritas</span></div></div><div style="background:rgba(0,0,0,0.2);border-radius:3px;padding:8px 12px;margin-top:8px;font-size:10px;color:var(--white-dim);">Exemplo 4×8–10: S1 20kg leve → S2 30kg → S3 35kg → S4 40kg até falha</div><div class="warmup-videos-title" style="margin-top:10px;">📱 Mobilidade — Inferiores</div><div class="warmup-videos"><a href="https://drive.google.com/file/d/1WJfflEMvAwbFIeeyLRoiT6IypcqkyHRs/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 1</a><a href="https://drive.google.com/file/d/16cq7ROyClZ90yE0MP6F4eE82jDVcSWKc/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 2</a></div></div></div><div class="logica-box"><strong>⚙️ Progressão:</strong> foque em <strong>manter técnica</strong> · não pule cardio (é parte do treino) · RIR 1-2 (nunca falha) <span style="color:var(--gold);">→</span> Cardio + musculação = mais gasto calórico total.</div><div class="meal-card"><table class="exercise-table"><thead><tr><th>Exercício / Bloco</th><th>Séries</th><th>Reps</th><th>Carga</th><th>Vídeo</th></tr></thead><tbody><tr style="background:rgba(34,197,94,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">🚣</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(34,197,94);font-weight:500;">🟢 Cardio 1 — Remo Aquecimento</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">3 min contínuo em Zona 2 · ritmo confortável</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Agachamento Frontal com Halteres</td><td class="ex-series">3</td><td class="ex-reps">8-10</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TB-ex1" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TB','ex1','Agachamento Frontal com Halteres')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Agachamento+Frontal+com+Halteres" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Supino Reto com Halteres</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TB-ex2" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TB','ex2','Supino Reto com Halteres')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Supino+Reto+com+Halteres" class="yt-link">▶ VER</a></td></tr>
+<tr style="background:rgba(248,113,113,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">🔥</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(248,113,113);font-weight:500;">🔥 Cardio 2 — AirBike HIIT</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">3 min · 20s forte / 40s leve · 3 rounds</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Leg Press 45</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TB-ex3" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TB','ex3','Leg Press 45')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Leg+Press+45" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Elevação Lateral com Halteres</td><td class="ex-series">3</td><td class="ex-reps">12-15</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TB-ex4" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TB','ex4','Elevação Lateral com Halteres')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Elevação+Lateral+com+Halteres" class="yt-link">▶ VER</a></td></tr>
+<tr style="background:rgba(234,179,8,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">⚡</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(234,179,8);font-weight:500;">⚡ Cardio 3 — Remo Sprint</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">2 min · 30s forte / 30s leve · 2 rounds</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Cadeira Extensora</td><td class="ex-series">3</td><td class="ex-reps">12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TB-ex5" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TB','ex5','Cadeira Extensora')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Cadeira+Extensora" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Rosca Direta com Halteres</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TB-ex6" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TB','ex6','Rosca Direta com Halteres')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Rosca+Direta+com+Halteres" class="yt-link">▶ VER</a></td></tr></tbody></table><div class="swipe-hint">← deslize →</div></div></div>
+<div id="p2TC" class="sub-treino-content"><div class="treino-header"><div><div class="treino-title"><span style="color:var(--gold)">Treino C — Glúteo + Ombro</span></div><div style="font-size:10px;color:var(--white-dim);margin-top:4px;">Abre com HIIT · dia mais intenso</div></div><div class="treino-day">Full Body</div></div><div class="treino-actions"><button class="btn-done" id="done-p2TC" onclick="markDone('p2TC')">✓ Concluído</button><button class="btn-timer" onclick="openTimer()">⏱ Timer</button><span class="done-badge" id="done-badge-p2TC"></span></div><div class="warmup-block warmup-inferior"><div class="warmup-icon">⚙️</div><div class="warmup-content"><div class="warmup-title" style="color:var(--green);">Regra de Progressão — Obrigatória</div><div style="font-size:11px;color:var(--white-dim);line-height:1.9;margin-bottom:10px;">Nunca comece com a carga máxima. As séries são <strong style="color:var(--white)">progressivas</strong> — aumente a carga a cada série desde que continue atingindo falha nas reps prescritas.</div><div class="warmup-steps"><div class="warmup-step"><span class="step-num">1ª</span><span class="step-text"><strong>Aquecimento:</strong> carga bem leve · algumas reps · sem falhar</span></div><div class="warmup-step"><span class="step-num">2ª+</span><span class="step-text"><strong>Progrida</strong> a carga até atingir falha nas reps prescritas</span></div></div><div style="background:rgba(0,0,0,0.2);border-radius:3px;padding:8px 12px;margin-top:8px;font-size:10px;color:var(--white-dim);">Exemplo 4×8–10: S1 20kg leve → S2 30kg → S3 35kg → S4 40kg até falha</div><div class="warmup-videos-title" style="margin-top:10px;">📱 Mobilidade — Inferiores</div><div class="warmup-videos"><a href="https://drive.google.com/file/d/1WJfflEMvAwbFIeeyLRoiT6IypcqkyHRs/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 1</a><a href="https://drive.google.com/file/d/16cq7ROyClZ90yE0MP6F4eE82jDVcSWKc/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 2</a></div></div></div><div class="logica-box"><strong>⚙️ Progressão:</strong> foque em <strong>manter técnica</strong> · não pule cardio (é parte do treino) · RIR 1-2 (nunca falha) <span style="color:var(--gold);">→</span> Cardio + musculação = mais gasto calórico total.</div><div class="meal-card"><table class="exercise-table"><thead><tr><th>Exercício / Bloco</th><th>Séries</th><th>Reps</th><th>Carga</th><th>Vídeo</th></tr></thead><tbody><tr style="background:rgba(248,113,113,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">🔥</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(248,113,113);font-weight:500;">🔥 Cardio 1 — AirBike HIIT curto</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">2 min · 20s forte / 20s leve · 3 rounds · abre forte</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Agachamento Sumô com Halteres</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TC-ex1" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TC','ex1','Agachamento Sumô com Halteres')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Agachamento+Sumô+com+Halteres" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Desenvolvimento com Halteres Sentada</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TC-ex2" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TC','ex2','Desenvolvimento com Halteres Sentada')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Desenvolvimento+com+Halteres+Sentada" class="yt-link">▶ VER</a></td></tr>
+<tr style="background:rgba(234,179,8,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">🚣</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(234,179,8);font-weight:500;">🟡 Cardio 2 — Remo Moderado</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">3 min contínuo em Zona 3 · ritmo firme (RPE 5-6)</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Agachamento Búlgaro</td><td class="ex-series">3</td><td class="ex-reps">10 (cada perna)</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TC-ex3" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TC','ex3','Agachamento Búlgaro')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Agachamento+Búlgaro" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Remada Máquina Pegada Neutra</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TC-ex4" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TC','ex4','Remada Máquina Pegada Neutra')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Remada+Máquina+Pegada+Neutra" class="yt-link">▶ VER</a></td></tr>
+<tr style="background:rgba(249,115,22,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">📈</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(249,115,22);font-weight:500;">🟠 Cardio 3 — AirBike Piramidal</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">3 min · 1min Z3 / 30s Z4 / 1min Z3 / 30s Z4 · fecha em pico</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Glúteo Coice na Polia</td><td class="ex-series">3</td><td class="ex-reps">12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TC-ex5" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TC','ex5','Glúteo Coice na Polia')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Glúteo+Coice+na+Polia" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Elevação Frontal com Halteres</td><td class="ex-series">3</td><td class="ex-reps">12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TC-ex6" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TC','ex6','Elevação Frontal com Halteres')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Elevação+Frontal+com+Halteres" class="yt-link">▶ VER</a></td></tr></tbody></table><div class="swipe-hint">← deslize →</div></div></div>
+<div id="p2TD" class="sub-treino-content"><div class="treino-header"><div><div class="treino-title"><span style="color:var(--gold)">Treino D — Força + Estabilização</span></div><div style="font-size:10px;color:var(--white-dim);margin-top:4px;">Aquecimento → sprint all-out curto → HIIT clássico</div></div><div class="treino-day">Full Body</div></div><div class="treino-actions"><button class="btn-done" id="done-p2TD" onclick="markDone('p2TD')">✓ Concluído</button><button class="btn-timer" onclick="openTimer()">⏱ Timer</button><span class="done-badge" id="done-badge-p2TD"></span></div><div class="warmup-block warmup-inferior"><div class="warmup-icon">⚙️</div><div class="warmup-content"><div class="warmup-title" style="color:var(--green);">Regra de Progressão — Obrigatória</div><div style="font-size:11px;color:var(--white-dim);line-height:1.9;margin-bottom:10px;">Nunca comece com a carga máxima. As séries são <strong style="color:var(--white)">progressivas</strong> — aumente a carga a cada série desde que continue atingindo falha nas reps prescritas.</div><div class="warmup-steps"><div class="warmup-step"><span class="step-num">1ª</span><span class="step-text"><strong>Aquecimento:</strong> carga bem leve · algumas reps · sem falhar</span></div><div class="warmup-step"><span class="step-num">2ª+</span><span class="step-text"><strong>Progrida</strong> a carga até atingir falha nas reps prescritas</span></div></div><div style="background:rgba(0,0,0,0.2);border-radius:3px;padding:8px 12px;margin-top:8px;font-size:10px;color:var(--white-dim);">Exemplo 4×8–10: S1 20kg leve → S2 30kg → S3 35kg → S4 40kg até falha</div><div class="warmup-videos-title" style="margin-top:10px;">📱 Mobilidade — Inferiores</div><div class="warmup-videos"><a href="https://drive.google.com/file/d/1WJfflEMvAwbFIeeyLRoiT6IypcqkyHRs/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 1</a><a href="https://drive.google.com/file/d/16cq7ROyClZ90yE0MP6F4eE82jDVcSWKc/view?usp=sharing" target="_blank" class="warmup-vid">▶ Mobilidade quadril e tornozelo 2</a></div></div></div><div class="logica-box"><strong>⚙️ Progressão:</strong> foque em <strong>manter técnica</strong> · não pule cardio (é parte do treino) · RIR 1-2 (nunca falha) <span style="color:var(--gold);">→</span> Cardio + musculação = mais gasto calórico total.</div><div class="meal-card"><table class="exercise-table"><thead><tr><th>Exercício / Bloco</th><th>Séries</th><th>Reps</th><th>Carga</th><th>Vídeo</th></tr></thead><tbody><tr style="background:rgba(34,197,94,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">🚣</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(34,197,94);font-weight:500;">🟢 Cardio 1 — Remo Aquecimento</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">3 min contínuo em Zona 2 · preparar coluna e postura</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Agachamento com Barra Hexagonal</td><td class="ex-series">3</td><td class="ex-reps">8-10</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TD-ex1" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TD','ex1','Agachamento com Barra Hexagonal')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Agachamento+com+Barra+Hexagonal" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Supino Inclinado com Halteres</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TD-ex2" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TD','ex2','Supino Inclinado com Halteres')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Supino+Inclinado+com+Halteres" class="yt-link">▶ VER</a></td></tr>
+<tr style="background:rgba(234,179,8,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">⚡</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(234,179,8);font-weight:500;">⚡ Cardio 2 — AirBike Sprint All-out</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">2 min · 10s tudo o que aguentar / 20s leve · 4 rounds</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Mesa Flexora</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TD-ex3" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TD','ex3','Mesa Flexora')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Mesa+Flexora" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Remada Alta na Polia com Corda</td><td class="ex-series">3</td><td class="ex-reps">12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TD-ex4" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TD','ex4','Remada Alta na Polia com Corda')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Remada+Alta+na+Polia+com+Corda" class="yt-link">▶ VER</a></td></tr>
+<tr style="background:rgba(248,113,113,0.08);"><td colspan="5" style="padding:12px 14px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="font-size:15px">🔥</span><span style="font-family:'Cormorant Garamond',serif;font-size:15px;color:rgb(248,113,113);font-weight:500;">🔥 Cardio 3 — Remo HIIT</span></div><div style="font-size:11px;color:var(--white-dim);line-height:1.7;padding-left:24px;">3 min · 30s forte / 30s leve · 3 rounds</div></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(74,222,128,0.15);color:#4ade80;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">INF</span>Sobe e Desce no Banco</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TD-ex5" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TD','ex5','Sobe e Desce no Banco')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Sobe+e+Desce+no+Banco" class="yt-link">▶ VER</a></td></tr>
+<tr><td class="ex-name"><span style="background:rgba(138,180,248,0.15);color:#8ab4f8;font-size:8px;padding:1px 5px;border-radius:2px;margin-right:5px;font-weight:600;">SUP</span>Rosca Martelo com Halteres</td><td class="ex-series">3</td><td class="ex-reps">10-12</td><td><input class="load-input" type="text" placeholder="kg" data-key="load-p2TD-ex6" onchange="saveLoad(this)"><button class="load-history-btn" onclick="showHist('p2TD','ex6','Rosca Martelo com Halteres')" title="Histórico">📊</button></td><td><a target="_blank" href="https://www.youtube.com/results?search_query=Rosca+Martelo+com+Halteres" class="yt-link">▶ VER</a></td></tr></tbody></table><div class="swipe-hint">← deslize →</div></div></div></div>
 </section>
 <section id="cardio" class="section">
-  <div class="section-header"><h2>Programa de <span>Cardio</span></h2><div class="section-line"></div></div>
-  <div style="background:var(--dark2);border:1px solid var(--border);border-radius:4px;padding:16px 20px;margin-bottom:18px;">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;">
-      <div><div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--white-dim);margin-bottom:4px;">Frequência</div><div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold);">4x / semana</div></div>
-      <div><div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--white-dim);margin-bottom:4px;">Duração</div><div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold);">30–60 min</div></div>
-      <div><div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--white-dim);margin-bottom:4px;">Programa</div><div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold);">6 semanas</div></div>
-      <div><div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--white-dim);margin-bottom:4px;">Meta semanal</div><div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold);">150–180 min</div></div>
+  <div class="section-header"><h2>Cardio <span>Integrado</span></h2><div class="section-line"></div></div>
+  <div class="alert-box alert-gold" style="margin-bottom:20px;">
+    <strong>🎯 Nova estratégia:</strong> a partir de <strong>04/08/2026</strong>, o cardio principal foi <strong>integrado aos treinos</strong> — em vez de sessões separadas, cada treino agora tem <strong>3 blocos de cardio</strong> (início/meio/fim) que aumentam o gasto calórico total e trabalham VO2máx.
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px;">
+
+    <!-- Como funciona agora -->
+    <div class="meal-card">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);margin-bottom:12px;">📌 Como funciona o cardio agora</div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:1.9;">
+        Cada um dos <strong style="color:var(--white)">4 treinos Full Body</strong> incorpora 3 blocos de cardio:
+      </p>
+      <div style="margin:12px 0 12px 12px;font-size:12px;color:var(--white-dim);line-height:2;">
+        🟢 <strong style="color:#4ade80">Cardio 1 (início)</strong> — geralmente aquecimento contínuo em Zona 2 (ou HIIT curto em dias mais intensos)<br>
+        🔥 <strong style="color:#f87171">Cardio 2 (meio)</strong> — HIIT (30/30, 20/40 ou 20/20) para pico metabólico<br>
+        ⚡ <strong style="color:#eab308">Cardio 3 (fim)</strong> — sprint curto, piramidal ou HIIT — fecha em intensidade
+      </div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:1.9;">
+        <strong style="color:var(--white)">Total por treino:</strong> ~8 min de cardio (dividido em 3 blocos) = <strong style="color:var(--white)">~32 min/semana</strong> de cardio integrado, mais foco no gasto calórico e sem exigir sessões extras.
+      </p>
+      <p style="font-size:12px;color:var(--white-dim);line-height:1.9;margin-top:8px;">
+        <strong style="color:var(--gold);">Equipamentos:</strong> AirBike e Remo — baixo impacto, seguros pra articulações.
+      </p>
     </div>
-  </div>
-  <div style="background:var(--dark2);border:1px solid var(--border);border-radius:4px;padding:14px 18px;margin-bottom:18px;">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--gold);margin-bottom:8px;">📊 Zonas de Intensidade</div>
-    <div style="display:flex;gap:7px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:110px;background:rgba(80,200,80,0.07);border:1px solid rgba(80,200,80,0.3);border-radius:3px;padding:9px;"><div class="zona-badge zona-verde" style="margin-bottom:4px;">🟢 Zona 1–2 · RPE 3–4</div><div style="font-size:10px;color:var(--white-dim);">Leve, confortável</div></div>
-      <div style="flex:1;min-width:110px;background:rgba(255,200,50,0.07);border:1px solid rgba(255,200,50,0.3);border-radius:3px;padding:9px;"><div class="zona-badge zona-amarela" style="margin-bottom:4px;">🟡 Zona 3 · RPE 5–6</div><div style="font-size:10px;color:var(--white-dim);">Moderado, respiração intensa</div></div>
-      <div style="flex:1;min-width:110px;background:rgba(255,80,80,0.07);border:1px solid rgba(255,80,80,0.3);border-radius:3px;padding:9px;"><div class="zona-badge zona-vermelha" style="margin-bottom:4px;">🔴 Zona 4 · RPE 7</div><div style="font-size:10px;color:var(--white-dim);">Forte controlado</div></div>
+
+    <!-- Sugestões extras opcionais -->
+    <div class="meal-card">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);margin-bottom:12px;">💡 Cardios extras (opcionais)</div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:1.9;">
+        Nos dias sem musculação, se a rotina permitir, você pode incluir <strong style="color:var(--white)">1-2 sessões leves de Zona 2</strong> — caminhada, bike ou elíptico. Não é obrigatório.
+      </p>
+      <div style="margin:14px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+        <table style="width:100%;border-collapse:collapse;font-size:11px;min-width:400px;">
+          <thead>
+            <tr style="background:rgba(201,168,76,0.07);">
+              <th style="padding:9px 13px;text-align:left;color:var(--gold);font-size:9px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid var(--border);">Modalidade</th>
+              <th style="padding:9px 13px;text-align:left;color:var(--gold);font-size:9px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid var(--border);">Duração</th>
+              <th style="padding:9px 13px;text-align:left;color:var(--gold);font-size:9px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid var(--border);">Intensidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:10px 13px;color:var(--white);border-bottom:1px solid rgba(255,255,255,0.04)"><strong>Caminhada</strong></td><td style="padding:10px 13px;color:var(--white-dim);border-bottom:1px solid rgba(255,255,255,0.04)">30-40 min</td><td style="padding:10px 13px;color:#4ade80;border-bottom:1px solid rgba(255,255,255,0.04)">Z2 · RPE 3-4</td></tr>
+            <tr><td style="padding:10px 13px;color:var(--white);border-bottom:1px solid rgba(255,255,255,0.04)"><strong>Bike (rua ou ergométrica)</strong></td><td style="padding:10px 13px;color:var(--white-dim);border-bottom:1px solid rgba(255,255,255,0.04)">30-40 min</td><td style="padding:10px 13px;color:#4ade80;border-bottom:1px solid rgba(255,255,255,0.04)">Z2 · RPE 3-4</td></tr>
+            <tr><td style="padding:10px 13px;color:var(--white);"><strong>Elíptico</strong></td><td style="padding:10px 13px;color:var(--white-dim);">30-40 min</td><td style="padding:10px 13px;color:#4ade80;">Z2 · RPE 3-4</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="swipe-hint">← deslize →</div>
+      <p style="font-size:11px;color:var(--white-dim);margin-top:10px;line-height:1.8;">
+        <strong style="color:var(--gold);">Nota:</strong> a prioridade absoluta é <strong style="color:var(--white)">cumprir os 4 treinos completos</strong> (com os cardios integrados). Sessões extras são bônus, não obrigação.
+      </p>
     </div>
+
+    <!-- Referência de zonas -->
+    <div class="meal-card">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);margin-bottom:12px;">📊 Referência de zonas</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
+        <div style="background:rgba(74,222,128,0.08);border-left:3px solid #4ade80;padding:10px 14px;">
+          <div style="font-size:11px;color:#4ade80;font-weight:600;letter-spacing:1px;margin-bottom:4px;">🟢 ZONA 2 · RPE 3-4</div>
+          <div style="font-size:10px;color:var(--white-dim);line-height:1.7">Leve · consegue conversar · base aeróbia</div>
+        </div>
+        <div style="background:rgba(251,191,36,0.08);border-left:3px solid #fbbf24;padding:10px 14px;">
+          <div style="font-size:11px;color:#fbbf24;font-weight:600;letter-spacing:1px;margin-bottom:4px;">🟡 ZONA 3 · RPE 5-6</div>
+          <div style="font-size:10px;color:var(--white-dim);line-height:1.7">Moderado · respiração acelerada · ritmo sustentável</div>
+        </div>
+        <div style="background:rgba(248,113,113,0.08);border-left:3px solid #f87171;padding:10px 14px;">
+          <div style="font-size:11px;color:#f87171;font-weight:600;letter-spacing:1px;margin-bottom:4px;">🔴 ZONA 4 · RPE 7-8</div>
+          <div style="font-size:10px;color:var(--white-dim);line-height:1.7">Forte controlado · usado nos HIITs · não sustentável por muito tempo</div>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="cardio-semana"><div class="cardio-semana-header">📅 Semana 1</div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 1 — Caminhada com variação <span class="zona-badge zona-verde">30 min</span></div><div class="cardio-desc"><strong>20 min</strong> Zona 2 · <strong>5× 1 min</strong> Zona 3 · restante leve</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 2 — Bike ou Elíptico <span class="zona-badge zona-verde">30 min</span></div><div class="cardio-desc">Zona 2 contínua</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 3 — Caminhada inclinada <span class="zona-badge zona-verde">30 min</span></div><div class="cardio-desc">Inclinação 3–5% · Zona 2</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 4 — Cardio longo <span class="zona-badge zona-verde">45 min</span></div><div class="cardio-desc">Bike ou Elíptico · Zona 2</div></div>
-  </div>
-  <div class="cardio-semana"><div class="cardio-semana-header">📅 Semana 2</div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 1 <span class="zona-badge zona-verde">35 min</span></div><div class="cardio-desc"><strong>6 estímulos</strong> curtos Zona 3</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 2 <span class="zona-badge zona-verde">30–35 min</span></div><div class="cardio-desc">Zona 2 contínua</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 3 — Caminhada inclinada <span class="zona-badge zona-verde">35 min</span></div><div class="cardio-desc">Inclinação 4–6%</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 4 <span class="zona-badge zona-amarela">50 min</span></div><div class="cardio-desc">Zona 2 progressiva</div></div>
-  </div>
-  <div class="cardio-semana"><div class="cardio-semana-header">📅 Semana 3</div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 1 <span class="zona-badge zona-verde">35 min</span></div><div class="cardio-desc"><strong>20 min</strong> Zona 2 + <strong>6× 1 min</strong> Zona 3</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 2 <span class="zona-badge zona-amarela">35 min</span></div><div class="cardio-desc">Zona 2–3</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 3 — Caminhada + trote <span class="zona-badge zona-amarela">35 min</span></div><div class="cardio-desc"><strong>6×</strong> 2 min caminhada + 1 min trote leve</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 4 <span class="zona-badge zona-amarela">55 min</span></div><div class="cardio-desc">Zona 2 sustentada</div></div>
-  </div>
-  <div class="cardio-semana" style="border-color:rgba(255,200,50,0.3);"><div class="cardio-semana-header" style="color:#ffc832;">📅 Semana 4 — Adaptação (redução de carga)</div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 1 <span class="zona-badge zona-verde">30 min</span></div><div class="cardio-desc">Zona 2 · poucos estímulos</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 2 <span class="zona-badge zona-verde">30 min</span></div><div class="cardio-desc">Zona 2 leve</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 3 <span class="zona-badge zona-verde">30 min</span></div><div class="cardio-desc">Zona 2 leve</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 4 <span class="zona-badge zona-verde">45 min</span></div><div class="cardio-desc">Zona 2 com poucos estímulos</div></div>
-  </div>
-  <div class="cardio-semana"><div class="cardio-semana-header">📅 Semana 5</div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 1 <span class="zona-badge zona-amarela">40 min</span></div><div class="cardio-desc"><strong>25 min</strong> Zona 2 + <strong>6× 2 min</strong> Zona 3</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 2 — Intervalado leve <span class="zona-badge zona-amarela">35 min</span></div><div class="cardio-desc"><strong>6×</strong> 2 min Zona 3 + 2 min Zona 2</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 3 <span class="zona-badge zona-amarela">40 min</span></div><div class="cardio-desc"><strong>6×</strong> 3 min caminhada + 2 min trote</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 4 <span class="zona-badge zona-amarela">60 min</span></div><div class="cardio-desc">Zona 2 sustentada</div></div>
-  </div>
-  <div class="cardio-semana"><div class="cardio-semana-header">📅 Semana 6</div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 1 <span class="zona-badge zona-amarela">40 min</span></div><div class="cardio-desc"><strong>20 min</strong> Zona 2 + <strong>10 min</strong> Zona 3 contínuo + restante leve</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 2 <span class="zona-badge zona-amarela">35–40 min</span></div><div class="cardio-desc">Zona 2–3</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🚶 Treino 3 <span class="zona-badge zona-amarela">40 min</span></div><div class="cardio-desc"><strong>5×</strong> 4 min caminhada + 2 min trote</div></div>
-    <div class="cardio-treino"><div class="cardio-treino-title">🏋️ Treino 4 — Cardio longo <span class="zona-badge zona-vermelha">60 min</span></div><div class="cardio-desc">Zona 2 sustentada</div></div>
-  </div>
+
 </section>
+
+
 
 <section id="conscientizacao" class="section">
   <div class="section-header"><h2>Biblioteca de <span>Conscientização</span></h2><div class="section-line"></div></div>
@@ -1002,30 +1074,139 @@ textarea.q-input{resize:vertical;min-height:80px;}
 </section>
 <section id="relatorio" class="section">
   <div class="section-header"><h2>Relatório de <span>Consultoria</span></h2><div class="section-line"></div></div>
-  <div style="background:linear-gradient(135deg,#1a1500,var(--dark2));border:1px solid var(--border);border-radius:4px;padding:22px;margin-bottom:18px;text-align:center;">
-    <div style="display:inline-block;background:var(--gold-dim);border:1px solid var(--border);color:var(--gold);font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px;">Cinthya Coelho</div>
-    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);margin-bottom:8px;">Relatório Personalizado de Consultoria</div>
-    <p style="font-size:12px;color:var(--white-dim);line-height:1.9;max-width:600px;margin:0 auto;">Além das explicações neste relatório, incluí links para vídeos educativos do meu Instagram para reforçar a conscientização e facilitar sua adesão ao processo.</p>
+  <div class="alert-box alert-gold" style="margin-bottom:20px;">
+    📌 <strong>Atualização — 04/08/2026:</strong> ajustes após o feedback semanal e o novo peso registrado (65 kg). Este relatório substitui as orientações anteriores e explica de forma técnica o raciocínio por trás de cada mudança.
   </div>
-  <div class="relatorio-section"><h3>🎯 Objetivo</h3><p>Implementar uma rotina com bons hábitos alimentares, treinamento e atividade aeróbica de forma estratégica, com foco em melhora da composição corporal, perda de gordura, ganho de massa muscular e melhora da qualidade de vida.</p><p><strong>O objetivo não é apenas seguir um plano, mas criar uma rotina sustentável que gere resultado ao longo do tempo.</strong></p><div class="links-row"><a href="https://www.instagram.com/reel/DN1T1hF4gf-/" target="_blank" class="ig-link">▶ Entenda o processo</a></div></div>
-  <div class="relatorio-section"><h3>🍽️ Planejamento da Dieta</h3><p>Foi elaborado um planejamento com <strong>4 refeições ao longo do dia</strong>, totalizando aproximadamente <strong>1.565 kcal por dia</strong>. Estruturado para criar déficit calórico controlado que promove perda de gordura preservando massa muscular.</p><div class="links-row"><a href="https://www.instagram.com/reel/DIzjTBhSr95/" target="_blank" class="ig-link">▶ Organização alimentar</a></div></div>
-  <div class="relatorio-section"><h3>🧠 Comportamento e Constância</h3><p>Resultado vem da repetição consistente de bons hábitos. <strong>Constância não é ausência de falhas — é capacidade de retorno.</strong></p><div class="links-row"><a href="https://www.instagram.com/reel/DHqfIjkxlM7/" target="_blank" class="ig-link">▶ Constância vence intensidade</a><a href="https://www.instagram.com/reel/DOgG7RTkYOx/" target="_blank" class="ig-link">▶ Não espere o momento perfeito</a></div></div>
-  <div class="relatorio-section"><h3>⏰ Horário das Refeições</h3><p>Os horários podem ser flexíveis conforme sua rotina. Mantenha intervalos de 3 a 4 horas e regularidade ao longo do dia — isso ajuda no controle do apetite, energia e adesão.</p><div class="links-row"><a href="https://www.instagram.com/reel/DNjfRDHvKzi/" target="_blank" class="ig-link">▶ Organização de horários</a></div></div>
-  <div class="relatorio-section"><h3>🏋️ Treinamento</h3><p>Programa com <strong>4 treinos de musculação por semana</strong> — 2 inferiores e 2 superiores. Essa divisão permite bom estímulo hipertrófico, equilíbrio entre volume e recuperação e evolução consistente.</p></div>
-  <div class="relatorio-section"><h3>🚴 Atividade Aeróbica</h3><p>Realizar entre <strong>150 a 180 minutos de atividade aeróbica por semana</strong>, distribuídos conforme disponibilidade. Programa de 6 semanas com progressão gradual e zonas de intensidade variadas.</p><div class="links-row"><a href="https://www.instagram.com/reel/DOY2YvMEbxP/" target="_blank" class="ig-link">▶ Benefícios do cardio</a></div></div>
-  <div class="relatorio-section"><h3>🍽️ Refeição Livre e Álcool</h3><p>1 a 2 refeições livres por semana, controladas e planejadas. Álcool — evitar ou reduzir ao máximo. Impacta diretamente perda de gordura, recuperação, sono e equilíbrio hormonal.</p><div class="links-row"><a href="https://www.instagram.com/reel/DNGS8cSRS5X/" target="_blank" class="ig-link">▶ Refeição livre</a><a href="https://www.instagram.com/reel/DI4b3FnSxAz/" target="_blank" class="ig-link">▶ Álcool e metabolismo</a></div></div>
-  <div class="suporte-box"><h3>Suporte Direto</h3><p>Este relatório representa o início do processo. Você conta com suporte de segunda a sexta, das 8h às 18h, para tirar dúvidas, alinhar estratégias e ajustar o plano. <strong>Quanto maior a comunicação, mais eficiente será sua evolução.</strong></p><div class="suporte-hours">⏰ Segunda a Sexta · 8h às 18h</div></div>
-  <div class="rel-block">
-    <h3>🏋️ Mudança para Full Body 5×/semana</h3>
-    <p>O programa foi atualizado para <strong>5 treinos Full Body semanais</strong>. Diferentemente do modelo de divisão por grupamentos, o Full Body estimula todo o corpo a cada sessão, promovendo maior frequência de estímulo por músculo, melhor recuperação e mais eficiência para objetivos de composição corporal.</p>
-    <p>Cada treino tem um perfil diferente — alguns com ênfase em inferiores, outros em superiores — garantindo variedade de estímulos sem perder a consistência da rotina. Os bi-sets (↔) aumentam a densidade do treino e o gasto calórico sem aumentar o tempo total de sessão.</p>
+
+  <div style="display:flex;flex-direction:column;gap:16px;">
+
+    <!-- OBJETIVO -->
+    <div class="meal-card">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);margin-bottom:12px;">🎯 Objetivo</div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;">
+        Continuar buscando <strong style="color:var(--white)">melhor composição corporal</strong> — perda de gordura + manutenção/ganho de massa muscular — priorizando <strong style="color:var(--white)">saúde, qualidade de vida e sustentabilidade</strong>. Como estamos num contexto de pós-menopausa e maturidade fisiológica, o processo é <strong style="color:var(--white)">gradual e estratégico</strong>, sem pressa e sem restrições agressivas.
+      </p>
+    </div>
+
+    <!-- ANÁLISE DO GANHO DE PESO -->
+    <div class="meal-card" style="border-color:rgba(251,191,36,0.35);background:rgba(251,191,36,0.03);">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:#fbbf24;margin-bottom:12px;">📊 Análise do ganho de peso (+1,5 kg em ~3,5 meses)</div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;">
+        Você me relatou no feedback ter atingido <strong style="color:var(--white)">65 kg</strong> (vs 63,5 kg no início). Esse ganho pode ter <strong style="color:var(--white)">duas explicações principais</strong>, e sem <strong style="color:var(--white)">fotos padronizadas de comparação</strong> não temos como mensurar com precisão qual está pesando mais:
+      </p>
+      <div style="margin:14px 0 14px 12px;font-size:12px;color:var(--white-dim);line-height:2;">
+        <strong style="color:var(--white)">1) Aderência incompleta ao plano alimentar</strong> — o planejamento nutricional é <strong style="color:var(--white)">matemática pura</strong>. Se você não estiver batendo o plano com precisão (beliscando fora, refeições extras, porções maiores que o prescrito), o superávit calórico gera acúmulo de gordura mesmo com treino consistente.<br><br>
+        <strong style="color:var(--white)">2) Ganho de massa muscular</strong> — por outro lado, treino de força bem estruturado (como o que estamos fazendo) aumenta massa magra. Em pós-menopausa com estímulo adequado + proteína suficiente, é plenamente possível ganhar 1-1,5 kg de massa muscular em 3-4 meses.
+      </div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;">
+        <strong style="color:#fbbf24;">⚠️ Por que insisto nas fotos:</strong> a balança é péssima métrica isolada. Sem comparação visual (mesma pose, mesma luz, mesmo horário, mesmo espelho), ficamos <strong style="color:var(--white)">no achismo</strong>. As fotos que recebi não estavam em padrão comparável — não deu pra avaliar. Vou pedir novamente agora e a cada 4 semanas — <strong style="color:var(--white)">é o dado mais valioso do processo</strong>.
+      </p>
+    </div>
+
+    <!-- ESTRATÉGIA ADOTADA -->
+    <div class="meal-card">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);margin-bottom:12px;">🔀 Estratégia adotada nesta atualização</div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;">
+        Independente de qual cenário está mais presente (aderência incompleta ou ganho muscular), fiz ajustes que <strong style="color:var(--white)">funcionam nos dois casos</strong>:
+      </p>
+      <div style="margin:14px 0;background:var(--dark3);border-left:2px solid var(--gold);padding:14px 18px;">
+        <div style="font-size:11px;color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Se for aderência incompleta</div>
+        <div style="font-size:12px;color:var(--white-dim);line-height:1.9;">
+          Reduzi as calorias de 1.565 → <strong style="color:var(--white)">~1.400 kcal</strong> via corte de carboidratos, criando <strong style="color:var(--white)">margem de segurança</strong> para caso ainda haja lapsos.
+        </div>
+      </div>
+      <div style="margin:14px 0;background:var(--dark3);border-left:2px solid #4ade80;padding:14px 18px;">
+        <div style="font-size:11px;color:#4ade80;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Se for ganho muscular (cenário aparente)</div>
+        <div style="font-size:12px;color:var(--white-dim);line-height:1.9;">
+          A proteína foi mantida integral (~110g/dia) e o volume de treino ficou preservado. A redução calórica é modesta e permite que o processo hipertrófico continue.
+        </div>
+      </div>
+      <div style="margin:14px 0;background:var(--dark3);border-left:2px solid #f87171;padding:14px 18px;">
+        <div style="font-size:11px;color:#f87171;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Cardio incorporado ao treino</div>
+        <div style="font-size:12px;color:var(--white-dim);line-height:1.9;">
+          Como você não conseguiu cumprir integralmente as sessões separadas de cardio (feedback confirmou "parcialmente"), <strong style="color:var(--white)">integrei 3 blocos de cardio dentro de cada treino</strong> — aquecimento contínuo, HIIT no meio, sprint no fim. Isso aumenta o gasto calórico total sem precisar de sessões extras, e ainda melhora a saúde cardiovascular.
+        </div>
+      </div>
+    </div>
+
+    <!-- DIETA -->
+    <div class="meal-card">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);margin-bottom:12px;">🍽️ Planejamento Alimentar</div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;">
+        Mantidas as <strong style="color:var(--white)">4 refeições diárias</strong> — a estrutura funciona pra sua rotina e você reportou boa adesão. Redução calórica veio 100% de <strong style="color:var(--white)">fontes de carboidrato</strong> (pão, arroz, granola), preservando a proteína que é o macro crítico pra pós-menopausa e hipertrofia.
+      </p>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;margin-top:10px;">
+        <strong style="color:var(--white)">Substituições ampliadas:</strong> cada alimento agora tem 8-10 opções (antes eram ~5), incluindo alternativas práticas para dias corridos, refeições fora de casa e viagens.
+      </p>
+      <div style="margin-top:14px;background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.3);border-radius:4px;padding:14px 18px;">
+        <p style="font-size:12px;color:#f87171;margin:0;line-height:1.9;">
+          <strong>⚠️ Ponto crítico — Refeição livre:</strong> <strong style="color:var(--white)">manter no máximo 1 vez por semana, planejada</strong>. Refeições extras, "belisquinhos" fora do plano ou fins de semana desregulados <strong style="color:var(--white)">supercompensam</strong> as calorias que perdemos ao longo da semana. Sem essa disciplina, você <strong style="color:var(--white)">nada, nada, nada e morre na praia</strong> — o esforço da semana inteira se anula em uma tarde.
+        </p>
+      </div>
+    </div>
+
+    <!-- TREINO -->
+    <div class="meal-card">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);margin-bottom:12px;">🏋️ Treinamento</div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;">
+        <strong style="color:var(--white)">Plano 2 ativo — 4 treinos Full Body por semana</strong> (você já vinha executando 4x na prática — formalizamos isso). Cada treino trabalha <strong style="color:var(--white)">todos os grupamentos</strong>, com intercalação de exercícios inferior/superior ao longo da sessão para melhor recuperação intra-treino.
+      </p>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;margin-top:10px;">
+        <strong style="color:var(--white)">Novidade — cardio integrado:</strong> cada treino tem 3 blocos de cardio (início, meio e fim), variando entre aquecimento em Zona 2, HIIT (30/30, 20/40, 20/20), sprint curto e piramidal. Isso <strong style="color:var(--white)">aumenta o gasto calórico total da sessão em 50-80 kcal</strong>, trabalha VO2máx e substitui parte das sessões de cardio dedicado que estavam sendo perdidas.
+      </p>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;margin-top:10px;">
+        Cada treino dura <strong style="color:var(--white)">~50-55 min</strong> — pensando no seu feedback de "cumpriu tempo às vezes", o volume foi calibrado pra ser sustentável mesmo em semanas apertadas.
+      </p>
+      <div style="margin-top:14px;background:var(--dark3);border-left:2px solid var(--gold);padding:12px 16px;font-size:12px;color:var(--white-dim);line-height:2;">
+        <strong style="color:var(--white)">Plano 1 (histórico)</strong> — os treinos A, B, C, D, E anteriores (20/04–04/08/2026) estão preservados na aba "Plano 1" como referência.
+      </div>
+    </div>
+
+    <!-- CARDIO -->
+    <div class="meal-card">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);margin-bottom:12px;">🚴 Atividade Aeróbica</div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;">
+        <strong style="color:var(--white)">Cardio principal agora está integrado ao treino</strong> (3 blocos por sessão × 4 treinos = ~32 min/semana). Isso <strong style="color:var(--white)">resolve o problema de aderência</strong> que você reportou — sem precisar de sessão separada, o cardio é feito sim ou sim, dentro do treino.
+      </p>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;margin-top:10px;">
+        Sessões extras de Zona 2 (caminhada, bike, elíptico · 30-40 min) nos dias sem musculação são <strong style="color:var(--white)">opcionais</strong> — bônus se a rotina permitir. Prioridade absoluta é <strong style="color:var(--white)">cumprir os 4 treinos completos</strong>.
+      </p>
+    </div>
+
+    <!-- FOTOS -->
+    <div class="meal-card" style="border-color:rgba(251,191,36,0.4);background:rgba(251,191,36,0.04);">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:#fbbf24;margin-bottom:12px;">📸 Fotos de comparação — CRÍTICO</div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;">
+        Vou pedir <strong style="color:var(--white)">novo conjunto de fotos padronizadas</strong>:
+      </p>
+      <div style="margin:10px 0 10px 12px;font-size:12px;color:var(--white-dim);line-height:2;">
+        • <strong style="color:var(--white)">Mesma pose</strong> (frente, lado direito, lado esquerdo, costas)<br>
+        • <strong style="color:var(--white)">Mesma roupa</strong> (peça que mostre bem a cintura e quadril)<br>
+        • <strong style="color:var(--white)">Mesmo horário</strong> (idealmente logo ao acordar, em jejum)<br>
+        • <strong style="color:var(--white)">Mesma luz</strong> (natural, sem sombra dura)<br>
+        • <strong style="color:var(--white)">Postura relaxada</strong> (sem flexionar músculos)
+      </div>
+      <p style="font-size:12px;color:var(--white-dim);line-height:2;">
+        Com esse padrão em mãos, em 4 semanas conseguimos <strong style="color:var(--white)">comparar objetivamente</strong> e saber se o ganho foi de gordura ou muscular — e ajustar o plano com precisão em vez de no achismo.
+      </p>
+    </div>
+
+    <!-- SUPORTE -->
+    <div class="meal-card">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);margin-bottom:12px;">📌 Próximos passos</div>
+      <div style="font-size:12px;color:var(--white-dim);line-height:2;">
+        <strong style="color:var(--white)">Semana atual:</strong> começar Plano 2 · registrar as cargas iniciais dos novos exercícios<br>
+        <strong style="color:var(--white)">Semana 1-2:</strong> foco em adaptação aos blocos de cardio integrado (dá pra sentir a diferença)<br>
+        <strong style="color:var(--white)">Semana 3-4:</strong> enviar novas fotos padronizadas + medidas de cintura/quadril/braço/coxa<br>
+        <strong style="color:var(--white)">Comunicação:</strong> qualquer dificuldade — feriado, viagem, médico — me avisa antes pra ajustarmos junto
+      </div>
+    </div>
+
   </div>
-  <div class="rel-block">
-    <h3>🍽️ Manutenção do Plano Alimentar</h3>
-    <p>Como a Cinthya ficou um período sem treinar de forma estruturada, não havia base suficiente para avaliar como o corpo responderia ao novo volume de treino com a quantidade atual de calorias. Por isso, <strong>o planejamento alimentar será mantido como está</strong> neste momento.</p>
-    <p>O objetivo agora é criar uma rotina sólida com esse padrão de alimentação e com esse volume de treino. Após algumas semanas de consistência, teremos dados reais para calibrar ajustes se necessário.</p>
-  </div>
+
 </section>
+
+
 <section id="feedback" class="section">
   <div class="section-header"><h2>Feedback <span>Semanal</span></h2><div class="section-line"></div></div>
 
@@ -1642,6 +1823,35 @@ function showTreino(id,btn){
   if(btn)btn.classList.add('active');
 }
 
+
+
+function showPlano(pid, btn){
+  document.querySelectorAll('.plano-content').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.plano-tab').forEach(function(b){b.classList.remove('active');});
+  var el = document.getElementById(pid);
+  if(el) el.classList.add('active');
+  if(btn){
+    btn.classList.add('active');
+    document.querySelectorAll('.plano-tab').forEach(function(b){
+      if(b.classList.contains('active')){
+        b.style.background='var(--gold)'; b.style.color='var(--dark)';
+        b.style.borderColor='var(--gold)'; b.style.fontWeight='600';
+      } else {
+        b.style.background='var(--dark2)'; b.style.color='var(--white-dim)';
+        b.style.borderColor='var(--border)'; b.style.fontWeight='normal';
+      }
+    });
+  }
+}
+function showSubTreino(id, btn, planoId){
+  var plano = document.getElementById(planoId);
+  if(!plano) return;
+  plano.querySelectorAll('.sub-treino-content').forEach(function(p){p.classList.remove('active');});
+  plano.querySelectorAll('.treino-tab').forEach(function(t){t.classList.remove('active');});
+  var el = document.getElementById(id);
+  if(el) el.classList.add('active');
+  if(btn) btn.classList.add('active');
+}
 function showSemana(id, btn){
   const section = btn.closest('section') || document;
   section.querySelectorAll('.semana-tab').forEach(t=>t.classList.remove('active'));
